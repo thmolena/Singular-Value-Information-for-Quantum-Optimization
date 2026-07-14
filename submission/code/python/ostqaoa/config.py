@@ -126,7 +126,7 @@ class ExperimentConfig:
     dtype: str = "complex128"
     random_seed: int = 42
     backend: str = "python_statevector"
-    methods: dict[str, Any] = field(default_factory=lambda: {"include": ["random_search", "tqa", "tqa_refine", "uq_qaoa_full"]})
+    methods: dict[str, Any] = field(default_factory=lambda: {"include": ["random_search", "tqa", "tqa_refine", "ostqaoa_full"]})
     query_budget: QueryBudgetConfig = field(default_factory=QueryBudgetConfig)
     graphs: GraphConfig = field(default_factory=GraphConfig)
     finite_shots: FiniteShotConfig = field(default_factory=FiniteShotConfig)
@@ -155,7 +155,7 @@ class ExperimentConfig:
             dtype=d.get("dtype", "complex128"),
             random_seed=int(d.get("random_seed", 42)),
             backend=d.get("backend", "python_statevector"),
-            methods=d.get("methods", {"include": ["random_search", "tqa", "tqa_refine", "uq_qaoa_full"]}),
+            methods=d.get("methods", {"include": ["random_search", "tqa", "tqa_refine", "ostqaoa_full"]}),
             query_budget=q,
             graphs=g,
             finite_shots=fs,

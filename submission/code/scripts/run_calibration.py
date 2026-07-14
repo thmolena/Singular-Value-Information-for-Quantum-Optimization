@@ -12,14 +12,14 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "python"))
 
-from uq_qaoa.config import load_config
-from uq_qaoa.graphs import generate_graph, graph_features
-from uq_qaoa.maxcut import all_cut_values
-from uq_qaoa.priors import theta_tqa, theta_global, theta_gin_prior, theta_knn_prior
-from uq_qaoa.posterior import fuse_diagonal_priors
-from uq_qaoa.qaoa_angles import random_theta
-from uq_qaoa.statevector import qaoa_expectation
-from uq_qaoa.calibration import normalized_squared_error, reliability_bins, expected_calibration_error, uncertainty_error_correlation
+from ostqaoa.config import load_config
+from ostqaoa.graphs import generate_graph, graph_features
+from ostqaoa.maxcut import all_cut_values
+from ostqaoa.priors import theta_tqa, theta_global, theta_gin_prior, theta_knn_prior
+from ostqaoa.posterior import fuse_diagonal_priors
+from ostqaoa.qaoa_angles import random_theta
+from ostqaoa.statevector import qaoa_expectation
+from ostqaoa.calibration import normalized_squared_error, reliability_bins, expected_calibration_error, uncertainty_error_correlation
 
 
 def as_float(value: Any) -> float:

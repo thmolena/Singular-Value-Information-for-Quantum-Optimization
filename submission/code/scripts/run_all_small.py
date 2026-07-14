@@ -12,16 +12,16 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "python"))
 
-from uq_qaoa.config import load_config
-from uq_qaoa.graphs import generate_graph, graph_features
-from uq_qaoa.maxcut import exact_maxcut_bruteforce, normalize_objective, all_cut_values
-from uq_qaoa.statevector import qaoa_expectation
-from uq_qaoa.priors import theta_tqa, theta_global, theta_gin_prior, theta_knn_prior
-from uq_qaoa.posterior import fuse_diagonal_priors, ablate_variance
-from uq_qaoa.search_policy import uq_qaoa_search
-from uq_qaoa.baselines import random_search, tqa_refine, tqa, global_prior, posterior_mean_only, posterior_anchors_only, spsa
-from uq_qaoa.traces import TRACE_COLUMNS, git_commit, now_iso
-from uq_qaoa.metrics import bootstrap_ci, standard_error
+from ostqaoa.config import load_config
+from ostqaoa.graphs import generate_graph, graph_features
+from ostqaoa.maxcut import exact_maxcut_bruteforce, normalize_objective, all_cut_values
+from ostqaoa.statevector import qaoa_expectation
+from ostqaoa.priors import theta_tqa, theta_global, theta_gin_prior, theta_knn_prior
+from ostqaoa.posterior import fuse_diagonal_priors, ablate_variance
+from ostqaoa.search_policy import ostqaoa_search
+from ostqaoa.baselines import random_search, tqa_refine, tqa, global_prior, posterior_mean_only, posterior_anchors_only, spsa
+from ostqaoa.traces import TRACE_COLUMNS, git_commit, now_iso
+from ostqaoa.metrics import bootstrap_ci, standard_error
 
 
 def build_anchors(p, layout, features):
@@ -68,13 +68,13 @@ def run_config(config_path: str, smoke: bool = False):
                         "posterior_mean_only": lambda: posterior_mean_only(objective, p, Q, mu, cfg.theta_layout),
                         "posterior_anchors_only": lambda: posterior_anchors_only(objective, p, Q, anchors, cfg.theta_layout),
                         "spsa": lambda: spsa(objective, p, Q, seed, cfg.theta_layout),
-                        "uq_qaoa_full": lambda: uq_qaoa_search(objective, p, Q, anchors, var, cfg.theta_layout, rng_seed=seed),
-                        "uq_no_covariance": lambda: uq_qaoa_search(objective, p, Q, anchors, ablate_variance(var, "isotropic"), cfg.theta_layout, rng_seed=seed),
-                        "uq_shuffled_covariance": lambda: uq_qaoa_search(objective, p, Q, anchors, ablate_variance(var, "shuffled", seed), cfg.theta_layout, rng_seed=seed),
+                        "ostqaoa_full": lambda: ostqaoa_search(objective, p, Q, anchors, var, cfg.theta_layout, rng_seed=seed),
+                        "uq_no_covariance": lambda: ostqaoa_search(objective, p, Q, anchors, ablate_variance(var, "isotropic"), cfg.theta_layout, rng_seed=seed),
+                        "uq_shuffled_covariance": lambda: ostqaoa_search(objective, p, Q, anchors, ablate_variance(var, "shuffled", seed), cfg.theta_layout, rng_seed=seed),
                         "uq_no_refinement": lambda: posterior_anchors_only(objective, p, Q, anchors, cfg.theta_layout),
-                        "uq_no_tqa_prior": lambda: uq_qaoa_search(objective, p, Q, [a for a in anchors if a[0] != "tqa"], var, cfg.theta_layout, rng_seed=seed),
-                        "uq_no_knn_prior": lambda: uq_qaoa_search(objective, p, Q, [a for a in anchors if a[0] != "knn"], var, cfg.theta_layout, rng_seed=seed),
-                        "uq_no_global_prior": lambda: uq_qaoa_search(objective, p, Q, [a for a in anchors if a[0] != "global"], var, cfg.theta_layout, rng_seed=seed),
+                        "uq_no_tqa_prior": lambda: ostqaoa_search(objective, p, Q, [a for a in anchors if a[0] != "tqa"], var, cfg.theta_layout, rng_seed=seed),
+                        "uq_no_knn_prior": lambda: ostqaoa_search(objective, p, Q, [a for a in anchors if a[0] != "knn"], var, cfg.theta_layout, rng_seed=seed),
+                        "uq_no_global_prior": lambda: ostqaoa_search(objective, p, Q, [a for a in anchors if a[0] != "global"], var, cfg.theta_layout, rng_seed=seed),
                     }
                     for method in methods:
                         if method not in method_calls:

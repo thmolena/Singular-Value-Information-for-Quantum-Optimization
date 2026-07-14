@@ -3,11 +3,11 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "uq-qaoa"
+name = "specops-ostqaoa"
 version = "1.2.0"
 description = "Noncommutative operator-spectral truncated priors (OST-QAOA) for query-efficient QAOA parameter search: installable package and deterministic manuscript artifact."
 readme = {text = "OST-QAOA: noncommutative operator-spectral truncated priors for query-efficient QAOA parameter search. Installable reference implementation that deterministically regenerates every figure, table, and number in the manuscript from a single seed. Full documentation in the project repository README.", content-type = "text/markdown"}
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 license = {text = "MIT"}
 authors = [{name = "Molena Huynh", email = "molena.huynh@jmp.com"}]
 maintainers = [{name = "Molena Huynh", email = "molena.huynh@jmp.com"}]
@@ -27,6 +27,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -51,12 +52,12 @@ Homepage = "https://github.com/thmolena/Operator-Spectral-Truncated-Priors-for-Q
 Repository = "https://github.com/thmolena/Operator-Spectral-Truncated-Priors-for-QAOA"
 
 [project.scripts]
-uqqaoa-reproduce = "uq_qaoa.reproduce:main"
-uqqaoa-artifacts = "uq_qaoa.paper_artifacts:main"
+ostqaoa-reproduce = "ostqaoa.full_reproduce:main"
+ostqaoa-artifacts = "ostqaoa.paper_artifacts:main"
 
 [tool.setuptools]
 package-dir = {"" = "python"}
 
 [tool.setuptools.packages.find]
 where = ["python"]
-include = ["uq_qaoa*"]
+include = ["ostqaoa*"]

@@ -9,7 +9,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "python"))
 
-from uq_qaoa.config import load_config
+from ostqaoa.config import load_config
 
 
 def main() -> None:
@@ -27,7 +27,7 @@ def main() -> None:
     ablation_methods = [m for m in df["method"].unique() if m.startswith("uq_")]
     keep = df[df["method"].isin(ablation_methods + ["tqa_refine"])]
     keys = ["p", "n", "graph_family", "query_budget_Q"]
-    full = keep[keep["method"] == "uq_qaoa_full"][keys + ["mean_ratio"]].rename(columns={"mean_ratio": "uq_full_mean_ratio"})
+    full = keep[keep["method"] == "ostqaoa_full"][keys + ["mean_ratio"]].rename(columns={"mean_ratio": "uq_full_mean_ratio"})
     out = keep.merge(full, on=keys, how="left")
     out["delta_vs_uq_full"] = out["mean_ratio"] - out["uq_full_mean_ratio"]
     out_path = tables / f"table_ablation_p{cfg.qaoa_depth}.csv"

@@ -4,10 +4,10 @@ import argparse, csv, subprocess, sys
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"python"))
-from uq_qaoa.graphs import generate_graph, save_edge_list
-from uq_qaoa.maxcut import all_cut_values
-from uq_qaoa.qaoa_angles import random_theta
-from uq_qaoa.statevector import qaoa_expectation
+from ostqaoa.graphs import generate_graph, save_edge_list
+from ostqaoa.maxcut import all_cut_values
+from ostqaoa.qaoa_angles import random_theta
+from ostqaoa.statevector import qaoa_expectation
 
 if __name__=="__main__":
     out=ROOT/"results"/"python_cpp_validation.csv"; out.parent.mkdir(exist_ok=True)

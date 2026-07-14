@@ -1,97 +1,97 @@
 graph_id,family,n,method,ratio,budget,depth,rank,commutator_weight
 er_n10_s464970455,er,10,Random,0.7826000139611774,24,3,4,4.0
-er_n10_s464970455,er,10,TQA,0.7253779863960301,24,3,4,4.0
-er_n10_s464970455,er,10,TQA+coordinate,0.7352571391139999,24,3,4,4.0
-er_n10_s464970455,er,10,kNN+coordinate,0.7352741523955372,24,3,4,4.0
-er_n10_s464970455,er,10,OST diagonal,0.8706361753296155,24,3,4,4.0
-er_n10_s464970455,er,10,OST-QAOA,0.8504096958719071,24,3,4,4.0
-er_n8_s1002201122,er,8,Random,0.6322747494065849,24,3,4,4.0
+er_n10_s464970455,er,10,TQA,0.7253779863960299,24,3,4,4.0
+er_n10_s464970455,er,10,TQA+coordinate,0.7352571391140007,24,3,4,4.0
+er_n10_s464970455,er,10,kNN+coordinate,0.7352742540600132,24,3,4,4.0
+er_n10_s464970455,er,10,OST diagonal,0.8706826881605284,24,3,4,4.0
+er_n10_s464970455,er,10,OST-QAOA,0.8501977715296092,24,3,4,4.0
+er_n8_s1002201122,er,8,Random,0.6322747494065847,24,3,4,4.0
 er_n8_s1002201122,er,8,TQA,0.6287045304021917,24,3,4,4.0
-er_n8_s1002201122,er,8,TQA+coordinate,0.6296712169783781,24,3,4,4.0
-er_n8_s1002201122,er,8,kNN+coordinate,0.631446373528767,24,3,4,4.0
-er_n8_s1002201122,er,8,OST diagonal,0.7126342558008666,24,3,4,4.0
-er_n8_s1002201122,er,8,OST-QAOA,0.737767570134015,24,3,4,4.0
-er_n10_s241744268,er,10,Random,0.8250512638008427,24,3,4,4.0
-er_n10_s241744268,er,10,TQA,0.6715750910339973,24,3,4,4.0
-er_n10_s241744268,er,10,TQA+coordinate,0.6802320104678223,24,3,4,4.0
-er_n10_s241744268,er,10,kNN+coordinate,0.7787974431011844,24,3,4,4.0
-er_n10_s241744268,er,10,OST diagonal,0.7890563104401257,24,3,4,4.0
-er_n10_s241744268,er,10,OST-QAOA,0.8018059152508201,24,3,4,4.0
-er_n8_s302958912,er,8,Random,0.6382143472139444,24,3,4,4.0
-er_n8_s302958912,er,8,TQA,0.6395084949661842,24,3,4,4.0
-er_n8_s302958912,er,8,TQA+coordinate,0.656610647447846,24,3,4,4.0
-er_n8_s302958912,er,8,kNN+coordinate,0.7622249584516768,24,3,4,4.0
-er_n8_s302958912,er,8,OST diagonal,0.7560253057745132,24,3,4,4.0
-er_n8_s302958912,er,8,OST-QAOA,0.7672507694945074,24,3,4,4.0
+er_n8_s1002201122,er,8,TQA+coordinate,0.6296712169783779,24,3,4,4.0
+er_n8_s1002201122,er,8,kNN+coordinate,0.6314446271094201,24,3,4,4.0
+er_n8_s1002201122,er,8,OST diagonal,0.7126342558008664,24,3,4,4.0
+er_n8_s1002201122,er,8,OST-QAOA,0.7377418864841675,24,3,4,4.0
+er_n10_s241744268,er,10,Random,0.825051263800843,24,3,4,4.0
+er_n10_s241744268,er,10,TQA,0.6715750910339972,24,3,4,4.0
+er_n10_s241744268,er,10,TQA+coordinate,0.6802320104678221,24,3,4,4.0
+er_n10_s241744268,er,10,kNN+coordinate,0.6864022802938403,24,3,4,4.0
+er_n10_s241744268,er,10,OST diagonal,0.7896027638448656,24,3,4,4.0
+er_n10_s241744268,er,10,OST-QAOA,0.8013962624447061,24,3,4,4.0
+er_n8_s302958912,er,8,Random,0.6382143472139448,24,3,4,4.0
+er_n8_s302958912,er,8,TQA,0.6395084949661846,24,3,4,4.0
+er_n8_s302958912,er,8,TQA+coordinate,0.6566106474478459,24,3,4,4.0
+er_n8_s302958912,er,8,kNN+coordinate,0.7634132264171419,24,3,4,4.0
+er_n8_s302958912,er,8,OST diagonal,0.7529350741272067,24,3,4,4.0
+er_n8_s302958912,er,8,OST-QAOA,0.7654982062621192,24,3,4,4.0
 random_regular_n10_s1377599424,random_regular,10,Random,0.7722382746918307,24,3,4,4.0
-random_regular_n10_s1377599424,random_regular,10,TQA,0.5168269230769229,24,3,4,4.0
+random_regular_n10_s1377599424,random_regular,10,TQA,0.5168269230769231,24,3,4,4.0
 random_regular_n10_s1377599424,random_regular,10,TQA+coordinate,0.7997632882480604,24,3,4,4.0
-random_regular_n10_s1377599424,random_regular,10,kNN+coordinate,0.8312864710731964,24,3,4,4.0
-random_regular_n10_s1377599424,random_regular,10,OST diagonal,0.8550111778534504,24,3,4,4.0
-random_regular_n10_s1377599424,random_regular,10,OST-QAOA,0.8485871810414957,24,3,4,4.0
+random_regular_n10_s1377599424,random_regular,10,kNN+coordinate,0.831286471073197,24,3,4,4.0
+random_regular_n10_s1377599424,random_regular,10,OST diagonal,0.8550111778534493,24,3,4,4.0
+random_regular_n10_s1377599424,random_regular,10,OST-QAOA,0.8485871810414967,24,3,4,4.0
 random_regular_n8_s1254174371,random_regular,8,Random,0.7395543691759607,24,3,4,4.0
-random_regular_n8_s1254174371,random_regular,8,TQA,0.5312499999999998,24,3,4,4.0
-random_regular_n8_s1254174371,random_regular,8,TQA+coordinate,0.8237928973171165,24,3,4,4.0
-random_regular_n8_s1254174371,random_regular,8,kNN+coordinate,0.8515124589354727,24,3,4,4.0
-random_regular_n8_s1254174371,random_regular,8,OST diagonal,0.8518027124875225,24,3,4,4.0
-random_regular_n8_s1254174371,random_regular,8,OST-QAOA,0.8518027124875225,24,3,4,4.0
-random_regular_n10_s1288683881,random_regular,10,Random,0.8056352811026465,24,3,4,4.0
-random_regular_n10_s1288683881,random_regular,10,TQA,0.5247395833333331,24,3,4,4.0
-random_regular_n10_s1288683881,random_regular,10,TQA+coordinate,0.8257706128937009,24,3,4,4.0
-random_regular_n10_s1288683881,random_regular,10,kNN+coordinate,0.801300325707876,24,3,4,4.0
-random_regular_n10_s1288683881,random_regular,10,OST diagonal,0.8353074634960255,24,3,4,4.0
-random_regular_n10_s1288683881,random_regular,10,OST-QAOA,0.8591480228638044,24,3,4,4.0
-random_regular_n8_s2139843381,random_regular,8,Random,0.7436640019867736,24,3,4,4.0
-random_regular_n8_s2139843381,random_regular,8,TQA,0.5312499999999998,24,3,4,4.0
-random_regular_n8_s2139843381,random_regular,8,TQA+coordinate,0.8237928973171167,24,3,4,4.0
-random_regular_n8_s2139843381,random_regular,8,kNN+coordinate,0.8659243410657733,24,3,4,4.0
-random_regular_n8_s2139843381,random_regular,8,OST diagonal,0.8518027124875222,24,3,4,4.0
-random_regular_n8_s2139843381,random_regular,8,OST-QAOA,0.8518027124875222,24,3,4,4.0
-watts_strogatz_n10_s1464385319,watts_strogatz,10,Random,0.7928774984798088,24,3,4,4.0
+random_regular_n8_s1254174371,random_regular,8,TQA,0.5312499999999999,24,3,4,4.0
+random_regular_n8_s1254174371,random_regular,8,TQA+coordinate,0.8237928973171167,24,3,4,4.0
+random_regular_n8_s1254174371,random_regular,8,kNN+coordinate,0.8515096937093893,24,3,4,4.0
+random_regular_n8_s1254174371,random_regular,8,OST diagonal,0.844379302406891,24,3,4,4.0
+random_regular_n8_s1254174371,random_regular,8,OST-QAOA,0.844379302406891,24,3,4,4.0
+random_regular_n10_s1288683881,random_regular,10,Random,0.8056352811026471,24,3,4,4.0
+random_regular_n10_s1288683881,random_regular,10,TQA,0.5247395833333333,24,3,4,4.0
+random_regular_n10_s1288683881,random_regular,10,TQA+coordinate,0.8257706128937011,24,3,4,4.0
+random_regular_n10_s1288683881,random_regular,10,kNN+coordinate,0.8186591560969211,24,3,4,4.0
+random_regular_n10_s1288683881,random_regular,10,OST diagonal,0.8353074634960252,24,3,4,4.0
+random_regular_n10_s1288683881,random_regular,10,OST-QAOA,0.8588795907151728,24,3,4,4.0
+random_regular_n8_s2139843381,random_regular,8,Random,0.7436640019867738,24,3,4,4.0
+random_regular_n8_s2139843381,random_regular,8,TQA,0.5312499999999999,24,3,4,4.0
+random_regular_n8_s2139843381,random_regular,8,TQA+coordinate,0.8237928973171172,24,3,4,4.0
+random_regular_n8_s2139843381,random_regular,8,kNN+coordinate,0.7762739022721735,24,3,4,4.0
+random_regular_n8_s2139843381,random_regular,8,OST diagonal,0.8518027124875225,24,3,4,4.0
+random_regular_n8_s2139843381,random_regular,8,OST-QAOA,0.8518027124875225,24,3,4,4.0
+watts_strogatz_n10_s1464385319,watts_strogatz,10,Random,0.7928774984798086,24,3,4,4.0
 watts_strogatz_n10_s1464385319,watts_strogatz,10,TQA,0.6438077670330592,24,3,4,4.0
-watts_strogatz_n10_s1464385319,watts_strogatz,10,TQA+coordinate,0.7558577931187034,24,3,4,4.0
-watts_strogatz_n10_s1464385319,watts_strogatz,10,kNN+coordinate,0.824336809730111,24,3,4,4.0
-watts_strogatz_n10_s1464385319,watts_strogatz,10,OST diagonal,0.8126839870870242,24,3,4,4.0
-watts_strogatz_n10_s1464385319,watts_strogatz,10,OST-QAOA,0.8196847200127493,24,3,4,4.0
-watts_strogatz_n8_s834035546,watts_strogatz,8,Random,0.7398814513615095,24,3,4,4.0
-watts_strogatz_n8_s834035546,watts_strogatz,8,TQA,0.6871050770066417,24,3,4,4.0
-watts_strogatz_n8_s834035546,watts_strogatz,8,TQA+coordinate,0.7316365349600229,24,3,4,4.0
-watts_strogatz_n8_s834035546,watts_strogatz,8,kNN+coordinate,0.7202130844019616,24,3,4,4.0
-watts_strogatz_n8_s834035546,watts_strogatz,8,OST diagonal,0.7746012550866196,24,3,4,4.0
-watts_strogatz_n8_s834035546,watts_strogatz,8,OST-QAOA,0.8211369283651601,24,3,4,4.0
-watts_strogatz_n10_s12926194,watts_strogatz,10,Random,0.7454418535374008,24,3,4,4.0
+watts_strogatz_n10_s1464385319,watts_strogatz,10,TQA+coordinate,0.7558577931187036,24,3,4,4.0
+watts_strogatz_n10_s1464385319,watts_strogatz,10,kNN+coordinate,0.8247416921605952,24,3,4,4.0
+watts_strogatz_n10_s1464385319,watts_strogatz,10,OST diagonal,0.8126224449979472,24,3,4,4.0
+watts_strogatz_n10_s1464385319,watts_strogatz,10,OST-QAOA,0.8197093955378638,24,3,4,4.0
+watts_strogatz_n8_s834035546,watts_strogatz,8,Random,0.7398814513615092,24,3,4,4.0
+watts_strogatz_n8_s834035546,watts_strogatz,8,TQA,0.6871050770066418,24,3,4,4.0
+watts_strogatz_n8_s834035546,watts_strogatz,8,TQA+coordinate,0.7316365349600226,24,3,4,4.0
+watts_strogatz_n8_s834035546,watts_strogatz,8,kNN+coordinate,0.7206424131275228,24,3,4,4.0
+watts_strogatz_n8_s834035546,watts_strogatz,8,OST diagonal,0.7745940502983957,24,3,4,4.0
+watts_strogatz_n8_s834035546,watts_strogatz,8,OST-QAOA,0.7985801104171273,24,3,4,4.0
+watts_strogatz_n10_s12926194,watts_strogatz,10,Random,0.7454418535374013,24,3,4,4.0
 watts_strogatz_n10_s12926194,watts_strogatz,10,TQA,0.6438227489615347,24,3,4,4.0
-watts_strogatz_n10_s12926194,watts_strogatz,10,TQA+coordinate,0.6597814314938569,24,3,4,4.0
-watts_strogatz_n10_s12926194,watts_strogatz,10,kNN+coordinate,0.7543620698161324,24,3,4,4.0
-watts_strogatz_n10_s12926194,watts_strogatz,10,OST diagonal,0.7799817962578374,24,3,4,4.0
-watts_strogatz_n10_s12926194,watts_strogatz,10,OST-QAOA,0.7771668265729084,24,3,4,4.0
-watts_strogatz_n8_s1506645356,watts_strogatz,8,Random,0.7513867654336809,24,3,4,4.0
+watts_strogatz_n10_s12926194,watts_strogatz,10,TQA+coordinate,0.6597814314938567,24,3,4,4.0
+watts_strogatz_n10_s12926194,watts_strogatz,10,kNN+coordinate,0.7699403720647701,24,3,4,4.0
+watts_strogatz_n10_s12926194,watts_strogatz,10,OST diagonal,0.7799856469144304,24,3,4,4.0
+watts_strogatz_n10_s12926194,watts_strogatz,10,OST-QAOA,0.777166826572909,24,3,4,4.0
+watts_strogatz_n8_s1506645356,watts_strogatz,8,Random,0.751386765433681,24,3,4,4.0
 watts_strogatz_n8_s1506645356,watts_strogatz,8,TQA,0.6358961875212951,24,3,4,4.0
-watts_strogatz_n8_s1506645356,watts_strogatz,8,TQA+coordinate,0.6729406912842517,24,3,4,4.0
-watts_strogatz_n8_s1506645356,watts_strogatz,8,kNN+coordinate,0.8169604315357774,24,3,4,4.0
-watts_strogatz_n8_s1506645356,watts_strogatz,8,OST diagonal,0.8037125965751338,24,3,4,4.0
-watts_strogatz_n8_s1506645356,watts_strogatz,8,OST-QAOA,0.8451679837670897,24,3,4,4.0
-barabasi_albert_n10_s1613936353,barabasi_albert,10,Random,0.6697700323295254,24,3,4,4.0
-barabasi_albert_n10_s1613936353,barabasi_albert,10,TQA,0.6264224815852665,24,3,4,4.0
-barabasi_albert_n10_s1613936353,barabasi_albert,10,TQA+coordinate,0.6347994683276306,24,3,4,4.0
-barabasi_albert_n10_s1613936353,barabasi_albert,10,kNN+coordinate,0.6378676542241952,24,3,4,4.0
-barabasi_albert_n10_s1613936353,barabasi_albert,10,OST diagonal,0.8163801481380659,24,3,4,4.0
+watts_strogatz_n8_s1506645356,watts_strogatz,8,TQA+coordinate,0.6729406912842514,24,3,4,4.0
+watts_strogatz_n8_s1506645356,watts_strogatz,8,kNN+coordinate,0.8219185557629084,24,3,4,4.0
+watts_strogatz_n8_s1506645356,watts_strogatz,8,OST diagonal,0.7990612926509121,24,3,4,4.0
+watts_strogatz_n8_s1506645356,watts_strogatz,8,OST-QAOA,0.8424889132089547,24,3,4,4.0
+barabasi_albert_n10_s1613936353,barabasi_albert,10,Random,0.6697700323295256,24,3,4,4.0
+barabasi_albert_n10_s1613936353,barabasi_albert,10,TQA,0.6264224815852663,24,3,4,4.0
+barabasi_albert_n10_s1613936353,barabasi_albert,10,TQA+coordinate,0.6347994683276302,24,3,4,4.0
+barabasi_albert_n10_s1613936353,barabasi_albert,10,kNN+coordinate,0.6378760420403432,24,3,4,4.0
+barabasi_albert_n10_s1613936353,barabasi_albert,10,OST diagonal,0.8163801481380661,24,3,4,4.0
 barabasi_albert_n10_s1613936353,barabasi_albert,10,OST-QAOA,0.8163801481380657,24,3,4,4.0
-barabasi_albert_n8_s1930664739,barabasi_albert,8,Random,0.7811171644532171,24,3,4,4.0
+barabasi_albert_n8_s1930664739,barabasi_albert,8,Random,0.7811171644532172,24,3,4,4.0
 barabasi_albert_n8_s1930664739,barabasi_albert,8,TQA,0.6023437499999996,24,3,4,4.0
-barabasi_albert_n8_s1930664739,barabasi_albert,8,TQA+coordinate,0.6158785704017902,24,3,4,4.0
-barabasi_albert_n8_s1930664739,barabasi_albert,8,kNN+coordinate,0.6178255112425252,24,3,4,4.0
-barabasi_albert_n8_s1930664739,barabasi_albert,8,OST diagonal,0.7755230631196554,24,3,4,4.0
-barabasi_albert_n8_s1930664739,barabasi_albert,8,OST-QAOA,0.7805236062346774,24,3,4,4.0
-barabasi_albert_n10_s2050221738,barabasi_albert,10,Random,0.7678650966710487,24,3,4,4.0
-barabasi_albert_n10_s2050221738,barabasi_albert,10,TQA,0.6116845827827568,24,3,4,4.0
-barabasi_albert_n10_s2050221738,barabasi_albert,10,TQA+coordinate,0.6385199079863172,24,3,4,4.0
-barabasi_albert_n10_s2050221738,barabasi_albert,10,kNN+coordinate,0.7394035435415708,24,3,4,4.0
-barabasi_albert_n10_s2050221738,barabasi_albert,10,OST diagonal,0.8218424714014994,24,3,4,4.0
-barabasi_albert_n10_s2050221738,barabasi_albert,10,OST-QAOA,0.8232441594036113,24,3,4,4.0
-barabasi_albert_n8_s695482502,barabasi_albert,8,Random,0.6934365307079441,24,3,4,4.0
-barabasi_albert_n8_s695482502,barabasi_albert,8,TQA,0.6116727542944954,24,3,4,4.0
-barabasi_albert_n8_s695482502,barabasi_albert,8,TQA+coordinate,0.6423248669684938,24,3,4,4.0
-barabasi_albert_n8_s695482502,barabasi_albert,8,kNN+coordinate,0.6405360227905499,24,3,4,4.0
-barabasi_albert_n8_s695482502,barabasi_albert,8,OST diagonal,0.850080880670831,24,3,4,4.0
-barabasi_albert_n8_s695482502,barabasi_albert,8,OST-QAOA,0.8708091337108754,24,3,4,4.0
+barabasi_albert_n8_s1930664739,barabasi_albert,8,TQA+coordinate,0.61587857040179,24,3,4,4.0
+barabasi_albert_n8_s1930664739,barabasi_albert,8,kNN+coordinate,0.6178377495278383,24,3,4,4.0
+barabasi_albert_n8_s1930664739,barabasi_albert,8,OST diagonal,0.7755230631196552,24,3,4,4.0
+barabasi_albert_n8_s1930664739,barabasi_albert,8,OST-QAOA,0.7798971796384232,24,3,4,4.0
+barabasi_albert_n10_s2050221738,barabasi_albert,10,Random,0.7678650966710483,24,3,4,4.0
+barabasi_albert_n10_s2050221738,barabasi_albert,10,TQA,0.6116845827827567,24,3,4,4.0
+barabasi_albert_n10_s2050221738,barabasi_albert,10,TQA+coordinate,0.6385199079863173,24,3,4,4.0
+barabasi_albert_n10_s2050221738,barabasi_albert,10,kNN+coordinate,0.739403543541571,24,3,4,4.0
+barabasi_albert_n10_s2050221738,barabasi_albert,10,OST diagonal,0.8218424714014992,24,3,4,4.0
+barabasi_albert_n10_s2050221738,barabasi_albert,10,OST-QAOA,0.823244159403613,24,3,4,4.0
+barabasi_albert_n8_s695482502,barabasi_albert,8,Random,0.6934365307079444,24,3,4,4.0
+barabasi_albert_n8_s695482502,barabasi_albert,8,TQA,0.6116727542944956,24,3,4,4.0
+barabasi_albert_n8_s695482502,barabasi_albert,8,TQA+coordinate,0.642324866968494,24,3,4,4.0
+barabasi_albert_n8_s695482502,barabasi_albert,8,kNN+coordinate,0.6405142911534062,24,3,4,4.0
+barabasi_albert_n8_s695482502,barabasi_albert,8,OST diagonal,0.8500803643797354,24,3,4,4.0
+barabasi_albert_n8_s695482502,barabasi_albert,8,OST-QAOA,0.8705990325891422,24,3,4,4.0

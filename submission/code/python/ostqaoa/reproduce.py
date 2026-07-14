@@ -21,7 +21,7 @@ def _candidate_roots() -> list[Path]:
     """Directories that may contain the master generator and core module."""
     here = Path(__file__).resolve()
     roots: list[Path] = []
-    # Installed layout: python/uq_qaoa/reproduce.py -> submission/code
+    # Installed layout: python/ostqaoa/reproduce.py -> submission/code
     roots.append(here.parents[2])
     # Source-tree fallbacks for in-place execution.
     roots.append(Path.cwd())

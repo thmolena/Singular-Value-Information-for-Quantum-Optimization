@@ -3,17 +3,17 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "python"))
 import numpy as np
 import pytest
-from uq_qaoa.config import load_config, dimension_scaled_min_budget, query_curve_values
-from uq_qaoa.qaoa_angles import split_theta, join_theta, random_theta, assert_theta
-from uq_qaoa.graphs import generate_graph, split_seeds
-from uq_qaoa.maxcut import cut_value, exact_maxcut_bruteforce, all_cut_values
-from uq_qaoa.statevector import qaoa_expectation
-from uq_qaoa.finite_shots import sample_objective
-from uq_qaoa.priors import theta_tqa, theta_global
-from uq_qaoa.posterior import fuse_diagonal_priors
-from uq_qaoa.search_policy import uq_qaoa_search
-from uq_qaoa.baselines import tqa_refine
-from uq_qaoa.operator_spectral import build_operator_library, operator_prior, ost_qaoa_search, spectral_operator_matrix
+from ostqaoa.config import load_config, dimension_scaled_min_budget, query_curve_values
+from ostqaoa.qaoa_angles import split_theta, join_theta, random_theta, assert_theta
+from ostqaoa.graphs import generate_graph, split_seeds
+from ostqaoa.maxcut import cut_value, exact_maxcut_bruteforce, all_cut_values
+from ostqaoa.statevector import qaoa_expectation
+from ostqaoa.finite_shots import sample_objective
+from ostqaoa.priors import theta_tqa, theta_global
+from ostqaoa.posterior import fuse_diagonal_priors
+from ostqaoa.search_policy import ostqaoa_search
+from ostqaoa.baselines import tqa_refine
+from ostqaoa.operator_spectral import build_operator_library, operator_prior, ost_qaoa_search, spectral_operator_matrix
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -79,7 +79,7 @@ def test_search_budget_accounting():
         return float(-np.sum((theta - 1.0) ** 2))
     anchors = [("tqa", theta_tqa(p)), ("global", theta_global(p))]
     _, var = fuse_diagonal_priors([theta_tqa(p), theta_global(p)], None, p)
-    res = uq_qaoa_search(obj, p, 7, anchors, var)
+    res = ostqaoa_search(obj, p, 7, anchors, var)
     assert len(calls) <= 7
     assert len(res.trace) <= 7
     base = tqa_refine(obj, p, 7)

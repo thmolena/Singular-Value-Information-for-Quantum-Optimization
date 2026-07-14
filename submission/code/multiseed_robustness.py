@@ -14,7 +14,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from uq_qaoa.operator_spectral import (
+from ostqaoa.operator_spectral import (
     DEFAULT_FAMILIES,
     DEFAULT_SIZES,
     build_operator_library,
@@ -22,7 +22,7 @@ from uq_qaoa.operator_spectral import (
     evaluate_methods_on_graph,
     stable_seed,
 )
-from uq_qaoa.paper_artifacts import _best_so_far, _q_to_target
+from ostqaoa.paper_artifacts import _best_so_far, _q_to_target
 
 METHOD_ORDER = ["Random", "TQA", "TQA+coordinate", "kNN+coordinate", "OST diagonal", "OST-QAOA"]
 BASELINE = "TQA+coordinate"

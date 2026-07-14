@@ -1,3 +1,0 @@
-[console_scripts]
-uqqaoa-artifacts = uq_qaoa.paper_artifacts:main
-uqqaoa-reproduce = uq_qaoa.reproduce:main

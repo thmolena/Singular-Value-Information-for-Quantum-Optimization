@@ -4,12 +4,12 @@ import argparse, csv, sys
 import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "python"))
-from uq_qaoa.config import load_config
-from uq_qaoa.graphs import generate_graph
-from uq_qaoa.maxcut import all_cut_values
-from uq_qaoa.priors import theta_tqa
-from uq_qaoa.statevector import qaoa_expectation
-from uq_qaoa.finite_shots import sample_objective
+from ostqaoa.config import load_config
+from ostqaoa.graphs import generate_graph
+from ostqaoa.maxcut import all_cut_values
+from ostqaoa.priors import theta_tqa
+from ostqaoa.statevector import qaoa_expectation
+from ostqaoa.finite_shots import sample_objective
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--config", default=str(ROOT/"configs"/"p3_main.yaml")); args = ap.parse_args()

@@ -3,8 +3,8 @@ from pathlib import Path
 import argparse, subprocess, sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"python"))
-from uq_qaoa.config import load_config
-from uq_qaoa.graphs import generate_graph, save_edge_list
+from ostqaoa.config import load_config
+from ostqaoa.graphs import generate_graph, save_edge_list
 
 if __name__=="__main__":
     ap=argparse.ArgumentParser(); ap.add_argument("--config",default=str(ROOT/"configs"/"p7_hpc_stress.yaml")); ap.add_argument("--smoke",action="store_true"); args=ap.parse_args()

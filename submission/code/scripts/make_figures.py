@@ -54,14 +54,14 @@ if trace_path.exists():
     trace = pd.read_csv(trace_path)
     if not trace.empty and {"method", "query_index", "best_so_far"}.issubset(trace.columns):
         trace["Q"] = trace["query_index"] + 1
-        method_order = ["random", "heuristic", "knn", "tqa", "gnn_point", "uq_qaoa"]
+        method_order = ["random", "heuristic", "knn", "tqa", "gnn_point", "ostqaoa"]
         method_labels = {
             "random": "Random",
             "heuristic": "Heuristic",
             "knn": "k-NN",
             "tqa": "TQA",
             "gnn_point": "GNN point",
-            "uq_qaoa": "UQ-QAOA",
+            "ostqaoa": "UQ-QAOA",
         }
         method_colors = {
             "random": "#737373",
@@ -69,7 +69,7 @@ if trace_path.exists():
             "knn": "#1e7a1e",
             "tqa": "#b81d1d",
             "gnn_point": "#7a4fad",
-            "uq_qaoa": "#155fa0",
+            "ostqaoa": "#155fa0",
         }
         plt.figure(figsize=(8, 4.8))
         for method in method_order:
@@ -99,8 +99,8 @@ if summaries:
     if not p3.empty and {"method", "query_budget_Q", "mean_ratio"}.issubset(p3.columns):
         pivot = p3.pivot_table(index="query_budget_Q", columns="method",
                                values="mean_ratio", aggfunc="mean")
-        if "tqa_refine" in pivot and "uq_qaoa_full" in pivot:
-            delta = (pivot["uq_qaoa_full"] - pivot["tqa_refine"]).dropna()
+        if "tqa_refine" in pivot and "ostqaoa_full" in pivot:
+            delta = (pivot["ostqaoa_full"] - pivot["tqa_refine"]).dropna()
             plt.figure(figsize=(6, 4))
             plt.axhline(0, color="0.4", lw=1, ls="--")
             plt.plot(delta.index, delta.values,

@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the paper below."
+title: "Operator-Spectral Truncated Priors for Query-Efficient QAOA Parameter Search"
+abstract: >-
+  Reference implementation and deterministic artifact regenerator for the
+  OST-QAOA manuscript. OST-QAOA constructs noncommutative operator-spectral
+  truncated priors over QAOA angles for query-efficient parameter search on
+  MaxCut, evaluated with exact statevector simulation across four synthetic
+  graph families. This package is part of the author's "spectral-truncation
+  operators" program.
+type: software
+authors:
+  - family-names: Huynh
+    given-names: Molena
+    email: molena.huynh@jmp.com
+version: "1.2.0"
+license: MIT
+repository-code: "https://github.com/thmolena/Operator-Spectral-Truncated-Priors-for-QAOA"
+keywords:
+  - QAOA
+  - quantum-optimization
+  - variational-quantum-algorithms
+  - operator-valued-kernels
+  - spectral-truncation
+  - MaxCut
+  - spectral-truncation-operators
+preferred-citation:
+  type: article
+  title: "Operator-Spectral Truncated Priors for Query-Efficient QAOA Parameter Search"
+  authors:
+    - family-names: Huynh
+      given-names: Molena
+      email: molena.huynh@jmp.com
+  year: 2026
+  notes: >-
+    Part of the "spectral-truncation operators" research program by Molena Huynh.
+    BibTeX key: huynh2026ostqaoa.
+references:
+  - type: article
+    title: "Operator-Spectral Truncated Priors for Query-Efficient QAOA Parameter Search"
+    authors:
+      - family-names: Huynh
+        given-names: Molena
+    year: 2026
+    notes: "BibTeX key: huynh2026ostqaoa"

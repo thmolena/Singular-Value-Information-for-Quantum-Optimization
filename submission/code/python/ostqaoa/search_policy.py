@@ -14,7 +14,7 @@ class SearchResult:
     trace: list[dict]
 
 
-def uq_qaoa_search(objective, p: int, Q: int, anchors: list[tuple[str, np.ndarray]], var_post, layout: str = "blocked", eta0: float = 1.0, shrink_factor: float = 0.5, eta_min: float = 1e-3, rng_seed: int = 0, trace_context: dict | None = None) -> SearchResult:
+def ostqaoa_search(objective, p: int, Q: int, anchors: list[tuple[str, np.ndarray]], var_post, layout: str = "blocked", eta0: float = 1.0, shrink_factor: float = 0.5, eta_min: float = 1e-3, rng_seed: int = 0, trace_context: dict | None = None) -> SearchResult:
     if Q <= 0:
         raise ValueError("Q must be positive")
     d = 2 * p

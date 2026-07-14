@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Operator-Spectral Truncated Priors for Query-Efficient QAOA (OST-QAOA)</title>
-  <meta name="description" content="OST-QAOA: a noncommutative operator-spectral truncated prior for query-efficient QAOA parameter selection. Each graph is mapped to a truncated, noncommuting operator on QAOA angle space whose eigenbasis supplies collective cross-layer search directions; a truncation parameter controls a representation-versus-query-budget tradeoff via the prior's effective dimension. On an exact-statevector MaxCut benchmark (p=3, Q=24) OST-QAOA improves over a budget-matched TQA coordinate-refinement baseline by +0.112 (16/16 paired instances, sign-test p<1e-4) and reaches comparable quality in ~2.4x fewer objective queries. Released as the installable package uq-qaoa that regenerates every figure and table from one deterministic seed." />
+  <meta name="description" content="OST-QAOA: a noncommutative operator-spectral truncated prior for query-efficient QAOA parameter selection. Each graph is mapped to a truncated, noncommuting operator on QAOA angle space whose eigenbasis supplies collective cross-layer search directions; a truncation parameter controls a representation-versus-query-budget tradeoff via the prior's effective dimension. On an exact-statevector MaxCut benchmark (p=3, Q=24) OST-QAOA improves over a budget-matched TQA coordinate-refinement baseline by +0.112 (16/16 paired instances, sign-test p<1e-4) and reaches comparable quality in ~2.4x fewer objective queries. Released as the installable package specops-ostqaoa that regenerates every figure and table from one deterministic seed." />
   <style>
     :root {
       --background: #ffffff;
@@ -798,6 +798,7 @@
       <div>Hybrid Quantum&ndash;Graph AI</div>
       <nav aria-label="Primary">
         <a href="#lead">OST-QAOA</a>
+        <a href="#contributions">Contributions</a>
         <a href="#method">Method</a>
         <a href="#theory">Theory</a>
         <a href="#results">Results</a>
@@ -805,6 +806,7 @@
         <a href="#demo">Demo</a>
         <a href="#notebooks">Paper &amp; Code</a>
         <a href="#references">References</a>
+        <a href="#cite">Cite</a>
         <a href="https://github.com/thmolena/Operator-Spectral-Truncated-Priors-for-QAOA" target="_blank" rel="noreferrer">GitHub</a>
       </nav>
     </div>
@@ -818,7 +820,7 @@
             <p class="cover-kicker">OST-QAOA &bull; Noncommutative operator-spectral truncated priors &bull; Query-efficient variational quantum optimization</p>
             <h1>Operator-Spectral Truncated Priors for Query-Efficient QAOA</h1>
             <p class="subtitle">
-              For low-depth QAOA, the dominant practical cost is the number of objective-function <em>queries</em> spent tuning the variational angles on each graph &mdash; and a warm-start point alone does not tell the optimizer which angle directions deserve exploration under a fixed budget. <strong>OST-QAOA learns and searches in operator space.</strong> Each graph is mapped to two <em>noncommuting</em> $2p\times2p$ operators $\mathcal A_G,\mathcal B_G$ built from its Laplacian spectrum, degree moments, and topology; the resulting angle operator is <em>spectrally truncated</em> to a rank-$n$ covariance whose eigenbasis supplies the <em>collective, cross-layer search directions</em> probed by a deterministic query policy. Transporting the spectral-truncation&ndash;kernel construction of noncommutative $C^{*}$-algebraic kernel machines into variational quantum optimization, the truncation parameter $n$ controls a <em>representation-versus-query-budget</em> tradeoff through the prior's effective dimension $d_{\mathrm{eff}}(n)$; we prove the truncated prior is positive definite and Loewner-contractive, that it recovers the commutative diagonal prior in the single-direction limit, and that the expected queries to a target ratio scale with $d_{\mathrm{eff}}(n)$. On an exact-statevector MaxCut benchmark the method outperforms a budget-matched physics baseline on every paired held-out instance and reaches comparable quality in roughly half the queries. The complete method, theory, and evidence are regenerated end-to-end by the installable package <code>uq-qaoa</code> from a single deterministic seed.
+              For low-depth QAOA, the dominant practical cost is the number of objective-function <em>queries</em> spent tuning the variational angles on each graph &mdash; and a warm-start point alone does not tell the optimizer which angle directions deserve exploration under a fixed budget. <strong>OST-QAOA learns and searches in operator space.</strong> Each graph is mapped to two <em>noncommuting</em> $2p\times2p$ operators $\mathcal A_G,\mathcal B_G$ built from its Laplacian spectrum, degree moments, and topology; the resulting angle operator is <em>spectrally truncated</em> to a rank-$n$ covariance whose eigenbasis supplies the <em>collective, cross-layer search directions</em> probed by a deterministic query policy. Transporting the spectral-truncation&ndash;kernel construction of noncommutative $C^{*}$-algebraic kernel machines into variational quantum optimization, the truncation parameter $n$ controls a <em>representation-versus-query-budget</em> tradeoff through the prior's effective dimension $d_{\mathrm{eff}}(n)$; we prove the truncated prior is positive definite and Loewner-contractive, that it recovers the commutative diagonal prior in the single-direction limit, and that the expected queries to a target ratio scale with $d_{\mathrm{eff}}(n)$. On an exact-statevector MaxCut benchmark the method outperforms a budget-matched physics baseline on every paired held-out instance and reaches comparable quality in roughly half the queries. The complete method, theory, and evidence are regenerated end-to-end by the installable package <code>specops-ostqaoa</code> from a single deterministic seed.
             </p>
             <div class="pill-row" aria-label="Topic tags">
               <span class="pill">Variational quantum algorithms</span>
@@ -829,6 +831,14 @@
             </div>
             <p class="meta-note" style="margin-top:18px;">
               Molena Huynh &middot; North Carolina State University &middot; <a href="mailto:molena.huynh@jmp.com">molena.huynh@jmp.com</a>
+            </p>
+            <div class="btn-group" style="margin-top:20px;">
+              <a class="btn btn-primary" href="https://thmolena.github.io/Operator-Spectral-Truncated-Priors-for-QAOA/submission/main.pdf" style="padding:12px 20px;font-size:1rem;">Read the paper (PDF)</a>
+              <a class="btn" href="#contributions" style="padding:12px 20px;font-size:1rem;">Contributions</a>
+              <a class="btn" href="https://github.com/thmolena/Operator-Spectral-Truncated-Priors-for-QAOA" target="_blank" rel="noreferrer" style="padding:12px 20px;font-size:1rem;">Code &amp; data</a>
+            </div>
+            <p class="field-note" style="margin-top:12px;">
+              Reproducible artifact: <code>pip install specops-ostqaoa</code>. Every figure and number on this page regenerates from a single deterministic seed.
             </p>
           </div>
 
@@ -889,6 +899,43 @@
           <p class="body-copy">
             In a measurement-limited regime, attaining comparable quality in substantially fewer queries outweighs a marginal objective gain obtained after many additional evaluations. OST-QAOA addresses precisely this trade-off: it concentrates the query budget on the collective eigendirections of a truncated, noncommuting operator prior, evaluating physics and transfer anchors first and then refining along the directions that carry the most variance.
           </p>
+        </div>
+      </section>
+
+      <section id="contributions" class="block-shell">
+        <div class="block-inner">
+          <div class="section-header">
+            <div class="section-label">Contributions</div>
+            <div class="section-intro body-copy">
+              <h2>What this work introduces</h2>
+              <p>
+                The central object is an operator-valued, graph-conditioned prior over QAOA angles whose spectral truncation yields the collective search directions along which a fixed objective-query budget is spent. Concretely, the paper makes four contributions.
+              </p>
+            </div>
+          </div>
+
+          <ol class="application-list" style="counter-reset:contrib;">
+            <li>
+              <div class="tag">Construction</div>
+              <h3 style="margin:6px 0 8px;font-size:1.1rem;color:var(--ink);">A noncommutative operator-spectral prior on QAOA angle space</h3>
+              <p>Each graph is mapped to two noncommuting symmetric $2p\times2p$ operators $\mathcal A_G,\mathcal B_G$ built from its normalized-Laplacian spectral moments, centered degree moments, and a topology descriptor. Their commutator $[\mathcal A_G,\mathcal B_G]$ enters a single angle operator that is spectrally truncated to a rank-$n$ covariance. Unlike a diagonal warm-start prior, the truncated operator supplies both a posterior mean and the off-diagonal, cross-layer search geometry &mdash; the directions, and their relative scales, along which the angles should be probed.</p>
+            </li>
+            <li>
+              <div class="tag">Theory</div>
+              <h3 style="margin:6px 0 8px;font-size:1.1rem;color:var(--ink);">A query-budget tradeoff governed by effective dimension</h3>
+              <p>The truncated prior is proved symmetric positive definite (a valid, contractive search frame) and Loewner-monotone in the truncation rank, with an exact commutative special case that recovers per-angle coordinate refinement when the commutator is switched off and the covariance restricted to its diagonal. The expected number of objective queries to a target approximation ratio is bounded by the prior's effective dimension $d_{\mathrm{eff}}(n)$ divided by the near-optimal mass it captures, predicting an interior optimum in the truncation rank.</p>
+            </li>
+            <li>
+              <div class="tag">Method</div>
+              <h3 style="margin:6px 0 8px;font-size:1.1rem;color:var(--ink);">A deterministic, auditable objective-query policy</h3>
+              <p>Physics and transfer anchors (the Trotterized-annealing schedule, the operator posterior mean, nearest-neighbor and global references) are evaluated first; the remaining budget probes the collective eigendirections $\pm s\sqrt{\lambda_j}\,v_j$ of the covariance in descending-variance order. The full sequence is recorded as a reproducible query trace, so every evaluation on the budget is accounted for.</p>
+            </li>
+            <li>
+              <div class="tag">Evidence</div>
+              <h3 style="margin:6px 0 8px;font-size:1.1rem;color:var(--ink);">A controlled, leakage-safe, fully reproducible benchmark</h3>
+              <p>On an exact-statevector MaxCut benchmark ($p{=}3$, matched budget $Q{=}24$, 16 family-held-out instances) OST-QAOA attains a mean approximation ratio of $0.820$ against $0.708$ for budget-matched TQA coordinate refinement &mdash; a $+0.112$ advantage on the primary seed ($+0.107\pm0.011$ across ten seeds), winning all $16/16$ paired comparisons (sign-test $p<10^{-4}$) &mdash; and reaches $98\%$ of the best observed ratio in a mean of $10.1$ queries versus $25.0$, a $\approx 2.4\times$ reduction in queries-to-target. Ablations localize the gain to the off-diagonal, noncommuting operator geometry, and everything regenerates from one deterministic seed.</p>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -1028,7 +1075,7 @@
           </p>
 
           <div class="demo-links">
-            <a class="button-link" href="submission/main.pdf">Read the OST-QAOA paper (PDF)</a>
+            <a class="button-link" href="https://thmolena.github.io/Operator-Spectral-Truncated-Priors-for-QAOA/submission/main.pdf">Read the OST-QAOA paper (PDF)</a>
             <a class="button-link" href="https://github.com/thmolena/Operator-Spectral-Truncated-Priors-for-QAOA/tree/main/submission/code" target="_blank" rel="noreferrer">Reproducible code artifact</a>
           </div>
         </div>
@@ -1072,7 +1119,7 @@
             <div class="section-intro">
               <h2>The evidence, as it appears in the paper</h2>
               <p>
-                Every panel below is a figure from the manuscript, rendered from the artifact that the installable <code>uq-qaoa</code> package regenerates from a single deterministic seed. No number on this page is entered by hand.
+                Every panel below is a figure from the manuscript, rendered from the artifact that the installable <code>specops-ostqaoa</code> package regenerates from a single deterministic seed. No number on this page is entered by hand.
               </p>
             </div>
           </div>
@@ -1085,7 +1132,7 @@
               <figcaption class="figure-copy">
                 <h3>Operator construction &amp; spectral truncation</h3>
                 <p>Each graph maps to two noncommuting $2p\times2p$ angle-space operators; their commutator enters a single operator that is spectrally truncated to a rank-$n$ covariance. The spectrum shows how truncation concentrates the search onto the leading collective directions.</p>
-                <div class="figure-actions"><button class="button-link figure-zoom" type="button" data-figure-src="figures/fig01_operator_spectrum.png" data-figure-title="Operator construction and spectral truncation">Open full resolution</button><a class="button-link" href="submission/main.pdf">See in paper</a></div>
+                <div class="figure-actions"><button class="button-link figure-zoom" type="button" data-figure-src="figures/fig01_operator_spectrum.png" data-figure-title="Operator construction and spectral truncation">Open full resolution</button><a class="button-link" href="https://thmolena.github.io/Operator-Spectral-Truncated-Priors-for-QAOA/submission/main.pdf">See in paper</a></div>
               </figcaption>
             </figure>
             <figure class="figure">
@@ -1095,7 +1142,7 @@
               <figcaption class="figure-copy">
                 <h3>Controlled benchmark at matched budget</h3>
                 <p>Mean approximation ratio across the six methods at the identical $Q{=}24$ query budget on $16$ family-held-out instances. OST-QAOA attains the highest ratio ($0.820$); the diagonal/commutative ablation isolates the contribution of the off-diagonal operator geometry.</p>
-                <div class="figure-actions"><button class="button-link figure-zoom" type="button" data-figure-src="figures/fig02_benchmark.png" data-figure-title="Controlled exact-statevector benchmark">Open full resolution</button><a class="button-link" href="submission/main.pdf">See in paper</a></div>
+                <div class="figure-actions"><button class="button-link figure-zoom" type="button" data-figure-src="figures/fig02_benchmark.png" data-figure-title="Controlled exact-statevector benchmark">Open full resolution</button><a class="button-link" href="https://thmolena.github.io/Operator-Spectral-Truncated-Priors-for-QAOA/submission/main.pdf">See in paper</a></div>
               </figcaption>
             </figure>
           </div>
@@ -1108,7 +1155,7 @@
               <figcaption class="figure-copy">
                 <h3>Interior optimum of the truncation sweep</h3>
                 <p>Sweeping the truncation rank $n\in\{1,\dots,2p\}$ exhibits the interior optimum predicted by the query-budget bound: aggressive truncation underfits the angle geometry, no truncation over-diffuses the covariance, and the operating point sits at $n^{\star}{=}4$.</p>
-                <div class="figure-actions"><button class="button-link figure-zoom" type="button" data-figure-src="figures/fig03_truncation_sweep.png" data-figure-title="Spectral-truncation sweep">Open full resolution</button><a class="button-link" href="submission/main.pdf">See in paper</a></div>
+                <div class="figure-actions"><button class="button-link figure-zoom" type="button" data-figure-src="figures/fig03_truncation_sweep.png" data-figure-title="Spectral-truncation sweep">Open full resolution</button><a class="button-link" href="https://thmolena.github.io/Operator-Spectral-Truncated-Priors-for-QAOA/submission/main.pdf">See in paper</a></div>
               </figcaption>
             </figure>
             <figure class="figure">
@@ -1118,7 +1165,7 @@
               <figcaption class="figure-copy">
                 <h3>Query-efficiency frontier</h3>
                 <p>Best-so-far approximation ratio versus the number of objective queries. OST-QAOA reaches $98\%$ of the best observed ratio in a mean of $10.1$ queries against $25.0$ for the budget-matched baseline &mdash; the $\approx2.4\times$ reduction that defines the result.</p>
-                <div class="figure-actions"><button class="button-link figure-zoom" type="button" data-figure-src="figures/fig04_query_curves.png" data-figure-title="Query-efficiency curves">Open full resolution</button><a class="button-link" href="submission/main.pdf">See in paper</a></div>
+                <div class="figure-actions"><button class="button-link figure-zoom" type="button" data-figure-src="figures/fig04_query_curves.png" data-figure-title="Query-efficiency curves">Open full resolution</button><a class="button-link" href="https://thmolena.github.io/Operator-Spectral-Truncated-Priors-for-QAOA/submission/main.pdf">See in paper</a></div>
               </figcaption>
             </figure>
           </div>
@@ -1213,8 +1260,7 @@
               <p>
                 Every claim on this page is backed by released material: the OST-QAOA manuscript, its installable and deterministic code artifact, and the full repository source. The entire manuscript &mdash; every figure, table, CSV summary, and query trace &mdash; is regenerated from a single seed by:
               </p>
-              <pre style="overflow-x:auto;background:#0f172a;color:#e2e8f0;padding:14px 16px;border-radius:8px;font-size:0.86rem;line-height:1.5;"><code>cd submission/code
-pip install .
+              <pre style="overflow-x:auto;background:#0f172a;color:#e2e8f0;padding:14px 16px;border-radius:8px;font-size:0.86rem;line-height:1.5;"><code>pip install specops-ostqaoa
 uqqaoa-reproduce --output-dir . --depth 3 --budget 24 --rank 4 --commutator-weight 4.0</code></pre>
             </div>
           </div>
@@ -1226,14 +1272,14 @@ uqqaoa-reproduce --output-dir . --depth 3 --budget 24 --rank 4 --commutator-weig
             <div class="table-note">Operator-Spectral Truncated Priors for Query-Efficient QAOA &mdash; the noncommutative operator construction, the positive-definiteness, monotone-truncation, commutative-limit, and query-budget-tradeoff results, and the controlled exact-statevector benchmark.</div>
           </div>
           <div class="link-actions">
-            <a class="button-link" href="submission/main.pdf">PDF</a>
+            <a class="button-link" href="https://thmolena.github.io/Operator-Spectral-Truncated-Priors-for-QAOA/submission/main.pdf">PDF</a>
           </div>
         </div>
 
         <div class="link-item">
           <div>
-            <strong>OST-QAOA code artifact (<code>uq-qaoa</code>)</strong>
-            <div class="table-note">Installable Python package (<code>python/uq_qaoa/</code>) exposing a CLI (<code>uqqaoa-reproduce</code>) and Python API; <code>pip install .</code> regenerates every figure, table, CSV, and query trace deterministically from the global seed.</div>
+            <strong>OST-QAOA code artifact (<code>specops-ostqaoa</code>)</strong>
+            <div class="table-note">Installable Python package exposing a CLI (<code>uqqaoa-reproduce</code>) and Python API; <code>pip install specops-ostqaoa</code> regenerates every figure, table, CSV, and query trace deterministically from the global seed.</div>
           </div>
           <div class="link-actions">
             <a class="button-link" href="https://github.com/thmolena/Operator-Spectral-Truncated-Priors-for-QAOA/tree/main/submission/code" target="_blank" rel="noreferrer">Browse code</a>
@@ -1286,9 +1332,34 @@ uqqaoa-reproduce --output-dir . --depth 3 --budget 24 --rank 4 --commutator-weig
         </div>
       </section>
 
+      <section id="cite" class="block-shell">
+        <div class="block-inner">
+          <div class="section-header">
+            <div class="section-label">Cite</div>
+            <div class="section-intro body-copy">
+              <h2>How to cite this work</h2>
+              <p>
+                If this work is useful, please cite the manuscript and the reproducible artifact using the entry below (BibTeX key <code>huynh2026ostqaoa</code>).
+              </p>
+            </div>
+          </div>
+          <pre style="overflow-x:auto;background:#0f172a;color:#e2e8f0;padding:16px 18px;border-radius:8px;font-size:0.86rem;line-height:1.55;"><code>@article{huynh2026ostqaoa,
+  author  = {Huynh, Molena},
+  title   = {Operator-Spectral Truncated Priors for Query-Efficient QAOA},
+  year    = {2026},
+  institution = {North Carolina State University},
+  note    = {Reproducible artifact: pip install specops-ostqaoa},
+  url     = {https://thmolena.github.io/Operator-Spectral-Truncated-Priors-for-QAOA/submission/main.pdf}
+}</code></pre>
+          <div class="demo-links">
+            <a class="button-link" href="https://thmolena.github.io/Operator-Spectral-Truncated-Priors-for-QAOA/submission/main.pdf">Read the paper (PDF)</a>
+          </div>
+        </div>
+      </section>
+
       <footer class="block-shell">
         Molena Huynh &middot; North Carolina State University &middot; <a href="mailto:molena.huynh@jmp.com">molena.huynh@jmp.com</a><br />
-        OST-QAOA &mdash; Operator-Spectral Truncated Priors for Query-Efficient QAOA &middot; Reproducible from the installable <code>uq-qaoa</code> package.
+        OST-QAOA &mdash; Operator-Spectral Truncated Priors for Query-Efficient QAOA &middot; Reproducible from the installable <code>specops-ostqaoa</code> package.
       </footer>
     </div>
   </main>

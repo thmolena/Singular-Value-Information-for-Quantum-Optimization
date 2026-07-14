@@ -3,7 +3,7 @@ from __future__ import annotations
 import numpy as np
 from .qaoa_angles import random_theta, project_angles, assert_theta
 from .priors import theta_tqa, theta_global
-from .search_policy import uq_qaoa_search, SearchResult
+from .search_policy import ostqaoa_search, SearchResult
 
 
 def random_search(objective, p: int, Q: int, seed: int = 0, layout: str = "blocked") -> SearchResult:
@@ -41,7 +41,7 @@ def global_prior(objective, p: int, Q: int, layout: str = "blocked") -> SearchRe
 def tqa_refine(objective, p: int, Q: int, layout: str = "blocked", seed: int = 0) -> SearchResult:
     d = 2 * p
     anchors = [("tqa", theta_tqa(p, layout))]
-    return uq_qaoa_search(objective, p, Q, anchors, np.full(d, 0.25), layout=layout, rng_seed=seed)
+    return ostqaoa_search(objective, p, Q, anchors, np.full(d, 0.25), layout=layout, rng_seed=seed)
 
 
 def posterior_mean_only(objective, p: int, Q: int, mu_post, layout: str = "blocked") -> SearchResult:
