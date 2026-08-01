@@ -1,0 +1,95 @@
+{
+  "files": [
+    {
+      "bytes": 13849,
+      "path": "figures/collision_audit.pdf",
+      "sha256": "60f434debf84e06bb47c23ce3aa195f0fe0d97f1a25a5643588cc8331a30c5a0"
+    },
+    {
+      "bytes": 41873,
+      "path": "figures/collision_audit.png",
+      "sha256": "722bf20b6edd61d07d929eee2124423bbbf646885635b08e74c66a6d3e237578"
+    },
+    {
+      "bytes": 26904,
+      "path": "figures/formula_validation_runtime.pdf",
+      "sha256": "5dd54bc3e6449705fa72e79021c9fe8a541c50d65742ede82a02b839c2d8ea69"
+    },
+    {
+      "bytes": 58238,
+      "path": "figures/formula_validation_runtime.png",
+      "sha256": "bcbfb518cf1984ade8838aae95ea0161391672b669f511fbeee8a434e6992c6a"
+    },
+    {
+      "bytes": 15200,
+      "path": "figures/grouped_query_curves.pdf",
+      "sha256": "d388db7f1d76d30af1fa1056879d6089f3af0d7ae88cfe824a0c75a90db48f70"
+    },
+    {
+      "bytes": 67617,
+      "path": "figures/grouped_query_curves.png",
+      "sha256": "17315b82626af57db04c74580f344afb09801edc44e95d5155d4644492f9da79"
+    },
+    {
+      "bytes": 16149,
+      "path": "figures/matched_kernel_runtime.pdf",
+      "sha256": "1b1840a922a4974353194e7293e13f719fe096f42e7b9259fc70bf5a8a05f05a"
+    },
+    {
+      "bytes": 68989,
+      "path": "figures/matched_kernel_runtime.png",
+      "sha256": "6937fb35ca8db861d56086de7630b76c65b1e469d1f6ca8b4d0ed13d47bfc207"
+    },
+    {
+      "bytes": 23107,
+      "path": "figures/residual_noncertification.pdf",
+      "sha256": "1e2291a70ca936f0b9c2339aabe02d754ce1ab6dbd8f9ac02dabc8816fadff80"
+    },
+    {
+      "bytes": 77324,
+      "path": "figures/residual_noncertification.png",
+      "sha256": "90c8cc1931ac19eb1abcf45d71fa89cea5d3a66f3cc1b90b94b7763f77a2a603"
+    },
+    {
+      "bytes": 11214,
+      "path": "figures/split_sensitivity.pdf",
+      "sha256": "0800ed82346c8a4cefae7dfbbf4d18b2bf72f67b28ed9bb808cf9828fc18ed70"
+    },
+    {
+      "bytes": 31895,
+      "path": "figures/split_sensitivity.png",
+      "sha256": "10b9245a7cba08c2143e02d6d5951e7bca592f41cba8eda84d9bd53965bd9686"
+    },
+    {
+      "bytes": 37055,
+      "path": "results.json",
+      "sha256": "92ce9b484d85c1cd6250e38d26839ee04062a265b1eb8d955a98b9adeb91f82c"
+    },
+    {
+      "bytes": 386,
+      "path": "results.tex",
+      "sha256": "ab9e2284e76a0c83c11e25231582d86d887c28c279da032eb4409f15371340d6"
+    },
+    {
+      "bytes": 89,
+      "path": "tables/collision_rows.tex",
+      "sha256": "24b7100211704f41fd7c8965dda0565e3f9ea5110b2b6412f655331f5eb802dd"
+    },
+    {
+      "bytes": 181,
+      "path": "tables/formula_runtime_rows.tex",
+      "sha256": "dc1a376a34a8ca1d3fd953bc3d823c1d7c8d8b96614992bbe9fc2c293c30fa05"
+    },
+    {
+      "bytes": 301,
+      "path": "tables/grouped_fold_rows.tex",
+      "sha256": "dc2e6f393961931b49ae1d955ee898910600067e3cd759744eb7c162c8ae958b"
+    },
+    {
+      "bytes": 183,
+      "path": "tables/kernel_runtime_rows.tex",
+      "sha256": "ee9f42ec090073c6db025749cd40aba2045f2e02f9154085054241279a69266a"
+    }
+  ],
+  "schema_version": 1
+}

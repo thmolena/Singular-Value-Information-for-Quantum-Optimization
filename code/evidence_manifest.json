@@ -1,0 +1,59 @@
+{
+  "schema_version": 5,
+  "package": "hqml-spectral-qaoa",
+  "title": "Collision Leakage and an Exact Depth-One Baseline: A Negative Audit of Singular-Value Priors for QAOA MaxCut",
+  "seed": 1202,
+  "public_data": [
+    {
+      "name": "Stanford Gset G1",
+      "distribution": "authenticated external fetch; not bundled",
+      "url": "https://web.stanford.edu/~yyye/yyye/Gset/G1",
+      "records": 800,
+      "edges": 19176,
+      "unique_edge_weights": [1.0],
+      "sha256": "73bf704d8ffc55ba42260ab4cb659e3dcb6e729be70404d2cf476ba4e46d1665"
+    }
+  ],
+  "registered_task": {
+    "instances": 48,
+    "vertices_per_instance": 10,
+    "query_candidates": 81,
+    "isomorphism_classes": 16,
+    "outer_fold_loads": [12, 12, 12, 12],
+    "split_rule": "whole first-seen isomorphism groups, decreasing-size load balance"
+  },
+  "negative_findings": {
+    "old_test_assignments_with_training_isomorph": 38,
+    "old_test_assignments_with_exact_feature_match": 18,
+    "old_test_assignments_with_ordered_edge_repeat": 11,
+    "spectral_residual_gate": 0.05,
+    "spectral_residual_passes": 2,
+    "spectral_residual_total_folds": 4,
+    "exact_formula_target_quantum_queries": 0,
+    "exact_formula_grid_regret": 0.0
+  },
+  "locked_results": {
+    "file": "results/results.json",
+    "sha256": "53917b250b2a478d68e8d68123e66ec673d489a256b75ed38d182b7e94440033",
+    "artifact_manifest": "results/manifest.json",
+    "artifact_manifest_sha256": "8ece73ee06e16de5b08ca204ee0eccb2ca07c10b00c1cba96b4173ab5f69619d"
+  },
+  "verification": {
+    "install": "python -m pip install .",
+    "first_fetch": "spectral-qaoa-reproduce --fetch-data --verify",
+    "existing_input": "spectral-qaoa-reproduce --g1-path /path/to/G1 --verify",
+    "tests": "python -m pytest -q tests",
+    "release_validator": "python scripts/validate_release.py",
+    "float_relative_tolerance": 1e-09,
+    "float_absolute_tolerance": 1e-10,
+    "timing_policy": "keys prefixed timing_ and runtime_environment are remeasured, not equality-locked"
+  },
+  "claim_boundaries": [
+    "The Wang et al. depth-one formula is established prior art, not a new algorithm claim.",
+    "No quantum-hardware advantage is claimed.",
+    "No conclusion is made for p greater than one or weighted MaxCut.",
+    "The matched CPU kernel timing includes construction and one application.",
+    "The fixed-rank kernel timing does not establish asymptotic compressibility.",
+    "The 48 tasks are induced from one authenticated source graph."
+  ]
+}

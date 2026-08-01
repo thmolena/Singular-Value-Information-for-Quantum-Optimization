@@ -2,6 +2,9 @@ env/
 .venv/
 __pycache__/
 *.pyc
+*.egg-info/
+build/
+dist/
 .pytest_cache/
 *.pt
 *.pth
@@ -17,20 +20,19 @@ matplotlib-*/
 *.log
 website/*.log
 
-# LaTeX build intermediates (keep main.pdf and main.bbl tracked)
+# LaTeX build intermediates (keep main.pdf)
+*.bbl
 *.blg
 *.toc
 *.fls
 *.fdb_latexmk
 *.synctex.gz
 
-# C++ build artifacts
+# Compiled build artifacts
 *.o
 *.obj
 *.so
 *.a
-submission/code/cpp/build/
-submission/code/cpp/**/build/
 
 # Editor-local config (may contain machine paths / private project refs)
 .vscode/

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hqml-spectral-qaoa"
+version = "2.0.0"
+description = "Collision-aware negative audit of singular-value priors for depth-one QAOA MaxCut"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0,<3", "matplotlib>=3.9,<4", "networkx>=3.4,<4"]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Molena Huynh"}]
+
+[project.scripts]
+spectral-qaoa-reproduce = "hqml_spectral_qaoa.experiment:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["hqml_spectral_qaoa*"]
+
+[tool.setuptools.package-data]
+"hqml_spectral_qaoa" = ["results/*", "results/figures/*", "results/tables/*"]

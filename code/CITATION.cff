@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the manuscript and this package."
+title: "hqml-spectral-qaoa"
+type: software
+version: 2.0.0
+date-released: 2026-07-31
+authors:
+  - family-names: Huynh
+    given-names: Molena
+repository-code: "https://github.com/thmolena/Singular-Value-Information-for-Quantum-Optimization"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Collision Leakage and an Exact Depth-One Baseline: A Negative Audit of Singular-Value Priors for QAOA MaxCut"
+  authors:
+    - family-names: Huynh
+      given-names: Molena
+  year: 2026

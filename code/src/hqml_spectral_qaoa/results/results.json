@@ -1,0 +1,1919 @@
+{
+  "budgets": [
+    1,
+    2,
+    4,
+    8,
+    12,
+    20,
+    40,
+    81
+  ],
+  "dataset": "Stanford Gset G1",
+  "dataset_sha256": "73bf704d8ffc55ba42260ab4cb659e3dcb6e729be70404d2cf476ba4e46d1665",
+  "dataset_url": "https://web.stanford.edu/~yyye/yyye/Gset/G1",
+  "edges": 19176,
+  "formula_validation": {
+    "classical_evaluation_work": "O(precompute + m q)",
+    "classical_storage": "O(n + m + q), or O(n + m) when streamed",
+    "max_absolute_error": 8.88178419700125e-16,
+    "per_task_max_absolute_error": [
+      7.7715611723761e-16,
+      6.66133814775094e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      6.66133814775094e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      8.88178419700125e-16,
+      7.7715611723761e-16,
+      8.88178419700125e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      8.88178419700125e-16,
+      8.88178419700125e-16,
+      8.88178419700125e-16,
+      8.88178419700125e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      8.88178419700125e-16,
+      8.88178419700125e-16,
+      7.7715611723761e-16,
+      6.66133814775094e-16,
+      6.66133814775094e-16,
+      8.88178419700125e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      6.66133814775094e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16,
+      7.7715611723761e-16
+    ],
+    "target_quantum_objective_queries": 0,
+    "values_checked": 3888
+  },
+  "grouped_aggregate_curves": {
+    "closed_form": {
+      "mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "std": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "mean": {
+      "mean": [
+        0.0157208586068469,
+        0.0141832263994268,
+        0.00332559776965489,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "std": [
+        0.0199019281896266,
+        0.0179422646068624,
+        0.00576010430258001,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "ridge": {
+      "mean": [
+        0.0091960276225884,
+        0.00332559776965489,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "std": [
+        0.0120586946647592,
+        0.00576010430258001,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "spectral": {
+      "mean": [
+        0.0079121033503162,
+        0.00784913561030923,
+        0.00682293936338157,
+        9.430134005095e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "std": [
+        0.013609959313745,
+        0.0135951016725537,
+        0.0118176776343385,
+        1.63334712190075e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "grouped_fold_loads": [
+    12,
+    12,
+    12,
+    12
+  ],
+  "grouped_folds": [
+    {
+      "development_indices": [
+        1,
+        6,
+        7,
+        10,
+        14,
+        15,
+        18,
+        30,
+        31,
+        33,
+        35,
+        36,
+        37,
+        39,
+        45,
+        47
+      ],
+      "development_instances": 16,
+      "fit_indices": [
+        0,
+        2,
+        4,
+        5,
+        8,
+        9,
+        13,
+        16,
+        17,
+        22,
+        24,
+        25,
+        26,
+        27,
+        32,
+        41,
+        42,
+        43,
+        44,
+        46
+      ],
+      "fit_instances": 20,
+      "fold": 1,
+      "mean_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.00689617693740781,
+          0.00563272657289399,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.00714446261425378,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "operator": {
+        "dense_matmat_products": 186624,
+        "development_sampled_row_relative_error": 0.174443983589987,
+        "entry_query_calls": 5,
+        "entry_query_fraction": 0.444444444444444,
+        "entry_query_requests": 1024,
+        "feature_butterfly_work": 1152,
+        "full_frobenius_relative_error": 0.0232774927598416,
+        "full_spectral_relative_error": 0.0242844297092267,
+        "global_dense_matrix_materialized": 0,
+        "matmat_products": 46656,
+        "matmat_work_ratio": 4.0,
+        "matrix_free": 1,
+        "operator_records": 48,
+        "operator_tolerance": 0.05,
+        "operator_tolerance_pass": 1,
+        "peak_block_entries": 384,
+        "peak_block_fraction": 0.166666666666667,
+        "sampled_row_relative_error": 0.0268089258162531,
+        "spectral_landmarks": 8,
+        "spectral_rank": 6,
+        "storage_fraction": 0.127604166666667,
+        "storage_scalars": 294
+      },
+      "ridge_regularization": 1e-06,
+      "spectral_regularization": 1e-06,
+      "std_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.00249205983769791,
+          0.00169833096263217,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.0236955018202014,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "test_indices": [
+        3,
+        11,
+        12,
+        19,
+        20,
+        21,
+        23,
+        28,
+        29,
+        34,
+        38,
+        40
+      ],
+      "test_instances": 12,
+      "train_instances": 36
+    },
+    {
+      "development_indices": [
+        3,
+        4,
+        5,
+        9,
+        11,
+        12,
+        13,
+        19,
+        20,
+        21,
+        22,
+        23,
+        28,
+        29,
+        34,
+        40
+      ],
+      "development_instances": 16,
+      "fit_indices": [
+        2,
+        6,
+        7,
+        8,
+        15,
+        16,
+        17,
+        24,
+        26,
+        27,
+        31,
+        33,
+        35,
+        36,
+        38,
+        39,
+        42,
+        44,
+        45,
+        46
+      ],
+      "fit_instances": 20,
+      "fold": 2,
+      "mean_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.000970230484268577,
+          0.000970230484268577,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.000163452370415171,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.000163452370415171,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "operator": {
+        "dense_matmat_products": 186624,
+        "development_sampled_row_relative_error": 0.0223431495699546,
+        "entry_query_calls": 5,
+        "entry_query_fraction": 0.444444444444444,
+        "entry_query_requests": 1024,
+        "feature_butterfly_work": 1152,
+        "full_frobenius_relative_error": 0.0205678767104706,
+        "full_spectral_relative_error": 0.021458862825118,
+        "global_dense_matrix_materialized": 0,
+        "matmat_products": 46656,
+        "matmat_work_ratio": 4.0,
+        "matrix_free": 1,
+        "operator_records": 48,
+        "operator_tolerance": 0.05,
+        "operator_tolerance_pass": 1,
+        "peak_block_entries": 384,
+        "peak_block_fraction": 0.166666666666667,
+        "sampled_row_relative_error": 0.0202331695243917,
+        "spectral_landmarks": 8,
+        "spectral_rank": 6,
+        "storage_fraction": 0.127604166666667,
+        "storage_scalars": 294
+      },
+      "ridge_regularization": 10.0,
+      "spectral_regularization": 10.0,
+      "std_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.00177492256024892,
+          0.00177492256024892,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.000399543564750006,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.000399543564750006,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "test_indices": [
+        0,
+        1,
+        10,
+        14,
+        18,
+        25,
+        30,
+        32,
+        37,
+        41,
+        43,
+        47
+      ],
+      "test_instances": 12,
+      "train_instances": 36
+    },
+    {
+      "development_indices": [
+        3,
+        11,
+        12,
+        16,
+        19,
+        20,
+        21,
+        23,
+        28,
+        29,
+        32,
+        34,
+        40,
+        43
+      ],
+      "development_instances": 14,
+      "fit_indices": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        9,
+        10,
+        13,
+        14,
+        17,
+        18,
+        22,
+        25,
+        26,
+        30,
+        33,
+        37,
+        38,
+        41,
+        42,
+        46,
+        47
+      ],
+      "fit_instances": 22,
+      "fold": 3,
+      "mean_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.0499917664946702,
+          0.0451046880295036,
+          0.0133023910786196,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.0294761955056846,
+          0.0133023910786196,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.0314849610308496,
+          0.0313965424412369,
+          0.0272917574535263,
+          3.772053602038e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "operator": {
+        "dense_matmat_products": 186624,
+        "development_sampled_row_relative_error": 0.221287382082506,
+        "entry_query_calls": 5,
+        "entry_query_fraction": 0.444444444444444,
+        "entry_query_requests": 1024,
+        "feature_butterfly_work": 1152,
+        "full_frobenius_relative_error": 0.0716030244783654,
+        "full_spectral_relative_error": 0.0590126533308204,
+        "global_dense_matrix_materialized": 0,
+        "matmat_products": 46656,
+        "matmat_work_ratio": 4.0,
+        "matrix_free": 1,
+        "operator_records": 48,
+        "operator_tolerance": 0.05,
+        "operator_tolerance_pass": 0,
+        "peak_block_entries": 384,
+        "peak_block_fraction": 0.166666666666667,
+        "sampled_row_relative_error": 0.157186401943857,
+        "spectral_landmarks": 8,
+        "spectral_rank": 6,
+        "storage_fraction": 0.127604166666667,
+        "storage_scalars": 294
+      },
+      "ridge_regularization": 1.0,
+      "spectral_regularization": 0.1,
+      "std_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.0335299491753257,
+          0.0380440873038759,
+          0.0111666728312868,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.0508581115901785,
+          0.0111666728312868,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.0717377477421693,
+          0.0715857479402525,
+          0.0655933691143133,
+          0.000125104864870686,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "test_indices": [
+        5,
+        6,
+        7,
+        15,
+        24,
+        27,
+        31,
+        35,
+        36,
+        39,
+        44,
+        45
+      ],
+      "test_instances": 12,
+      "train_instances": 36
+    },
+    {
+      "development_indices": [
+        3,
+        5,
+        11,
+        12,
+        19,
+        20,
+        21,
+        23,
+        28,
+        29,
+        32,
+        34,
+        40,
+        43
+      ],
+      "development_instances": 14,
+      "fit_indices": [
+        0,
+        1,
+        6,
+        7,
+        10,
+        14,
+        15,
+        18,
+        24,
+        25,
+        27,
+        30,
+        31,
+        35,
+        36,
+        37,
+        38,
+        39,
+        41,
+        44,
+        45,
+        47
+      ],
+      "fit_instances": 22,
+      "fold": 4,
+      "mean_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.00502526051104088,
+          0.00502526051104088,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "operator": {
+        "dense_matmat_products": 186624,
+        "development_sampled_row_relative_error": 0.0237664703633403,
+        "entry_query_calls": 5,
+        "entry_query_fraction": 0.444444444444444,
+        "entry_query_requests": 1024,
+        "feature_butterfly_work": 1152,
+        "full_frobenius_relative_error": 0.0475886807364719,
+        "full_spectral_relative_error": 0.0509593353655435,
+        "global_dense_matrix_materialized": 0,
+        "matmat_products": 46656,
+        "matmat_work_ratio": 4.0,
+        "matrix_free": 1,
+        "operator_records": 48,
+        "operator_tolerance": 0.05,
+        "operator_tolerance_pass": 0,
+        "peak_block_entries": 384,
+        "peak_block_fraction": 0.166666666666667,
+        "sampled_row_relative_error": 0.0762407323136659,
+        "spectral_landmarks": 8,
+        "spectral_rank": 6,
+        "storage_fraction": 0.127604166666667,
+        "storage_scalars": 294
+      },
+      "ridge_regularization": 10.0,
+      "spectral_regularization": 1e-06,
+      "std_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.00428910488453288,
+          0.00428910488453288,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "test_indices": [
+        2,
+        4,
+        8,
+        9,
+        13,
+        16,
+        17,
+        22,
+        26,
+        33,
+        42,
+        46
+      ],
+      "test_instances": 12,
+      "train_instances": 36
+    }
+  ],
+  "isomorphism_class_count": 16,
+  "isomorphism_class_sizes": [
+    2,
+    7,
+    5,
+    11,
+    4,
+    1,
+    7,
+    1,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "isomorphism_groups": [
+    [
+      0,
+      25
+    ],
+    [
+      1,
+      10,
+      14,
+      18,
+      30,
+      37,
+      47
+    ],
+    [
+      2,
+      8,
+      17,
+      26,
+      42
+    ],
+    [
+      3,
+      11,
+      12,
+      19,
+      20,
+      21,
+      23,
+      28,
+      29,
+      34,
+      40
+    ],
+    [
+      4,
+      9,
+      13,
+      22
+    ],
+    [
+      5
+    ],
+    [
+      6,
+      7,
+      15,
+      31,
+      35,
+      36,
+      39
+    ],
+    [
+      16
+    ],
+    [
+      24,
+      44
+    ],
+    [
+      27
+    ],
+    [
+      32,
+      43
+    ],
+    [
+      33
+    ],
+    [
+      38
+    ],
+    [
+      41
+    ],
+    [
+      45
+    ],
+    [
+      46
+    ]
+  ],
+  "learning_instances": 48,
+  "old_row_aggregate_curves": {
+    "closed_form": {
+      "mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "std": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "mean": {
+      "mean": [
+        0.0157208586068469,
+        0.0133155574832895,
+        0.00332559776965489,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "std": [
+        0.0117889076218409,
+        0.0121514126639946,
+        0.00363028509899587,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "ridge": {
+      "mean": [
+        0.00942492191963293,
+        0.00449891936413644,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "std": [
+        0.00477852420627656,
+        0.00451154126918005,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "spectral": {
+      "mean": [
+        2.00592586020165e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "std": [
+        1.33900124401506e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "old_row_fold_audit": [
+    {
+      "feature_matches": 9,
+      "fold": 1,
+      "ordered_edge_repeats": 2,
+      "test_tasks": 12,
+      "topology_matches": 9
+    },
+    {
+      "feature_matches": 9,
+      "fold": 2,
+      "ordered_edge_repeats": 2,
+      "test_tasks": 12,
+      "topology_matches": 8
+    },
+    {
+      "feature_matches": 10,
+      "fold": 3,
+      "ordered_edge_repeats": 2,
+      "test_tasks": 12,
+      "topology_matches": 10
+    },
+    {
+      "feature_matches": 11,
+      "fold": 4,
+      "ordered_edge_repeats": 5,
+      "test_tasks": 12,
+      "topology_matches": 11
+    }
+  ],
+  "old_row_folds": [
+    {
+      "development_indices": [
+        1,
+        7,
+        14,
+        21,
+        27,
+        34,
+        41,
+        47
+      ],
+      "development_instances": 8,
+      "fit_indices": [
+        2,
+        3,
+        5,
+        6,
+        9,
+        10,
+        11,
+        13,
+        15,
+        17,
+        18,
+        19,
+        22,
+        23,
+        25,
+        26,
+        29,
+        30,
+        31,
+        33,
+        35,
+        37,
+        38,
+        39,
+        42,
+        43,
+        45,
+        46
+      ],
+      "fit_instances": 28,
+      "fold": 1,
+      "mean_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.0103191815921792,
+          0.0084864024216798,
+          0.00189495293465703,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.00283178837202899,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          2.12582491938356e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "operator": {
+        "dense_matmat_products": 186624,
+        "development_sampled_row_relative_error": 0.0293325938812679,
+        "entry_query_calls": 5,
+        "entry_query_fraction": 0.444444444444444,
+        "entry_query_requests": 1024,
+        "feature_butterfly_work": 1152,
+        "full_frobenius_relative_error": 0.0237091440158905,
+        "full_spectral_relative_error": 0.0248025439925499,
+        "global_dense_matrix_materialized": 0,
+        "matmat_products": 46656,
+        "matmat_work_ratio": 4.0,
+        "matrix_free": 1,
+        "operator_records": 48,
+        "operator_tolerance": 0.05,
+        "operator_tolerance_pass": 1,
+        "peak_block_entries": 384,
+        "peak_block_fraction": 0.166666666666667,
+        "sampled_row_relative_error": 0.0302231940671415,
+        "spectral_landmarks": 8,
+        "spectral_rank": 6,
+        "storage_fraction": 0.127604166666667,
+        "storage_scalars": 294
+      },
+      "ridge_regularization": 0.1,
+      "spectral_regularization": 0.1,
+      "std_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.0204293769797061,
+          0.0209275563931799,
+          0.00628484787964021,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.00633294928084879,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          7.0505636275828e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "test_indices": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44
+      ],
+      "test_instances": 12,
+      "train_instances": 36
+    },
+    {
+      "development_indices": [
+        2,
+        8,
+        15,
+        22,
+        28,
+        35,
+        42
+      ],
+      "development_instances": 7,
+      "fit_indices": [
+        0,
+        3,
+        4,
+        6,
+        7,
+        10,
+        11,
+        12,
+        14,
+        16,
+        18,
+        19,
+        20,
+        23,
+        24,
+        26,
+        27,
+        30,
+        31,
+        32,
+        34,
+        36,
+        38,
+        39,
+        40,
+        43,
+        44,
+        46,
+        47
+      ],
+      "fit_instances": 29,
+      "fold": 2,
+      "mean_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.00634586282852078,
+          0.00532173072435825,
+          3.772053602038e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.0163324608351129,
+          0.00852091278326063,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          3.772053602038e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "operator": {
+        "dense_matmat_products": 186624,
+        "development_sampled_row_relative_error": 0.0285547532629403,
+        "entry_query_calls": 5,
+        "entry_query_fraction": 0.444444444444444,
+        "entry_query_requests": 1024,
+        "feature_butterfly_work": 1152,
+        "full_frobenius_relative_error": 0.0229418513247318,
+        "full_spectral_relative_error": 0.0219504684369722,
+        "global_dense_matrix_materialized": 0,
+        "matmat_products": 46656,
+        "matmat_work_ratio": 4.0,
+        "matrix_free": 1,
+        "operator_records": 48,
+        "operator_tolerance": 0.05,
+        "operator_tolerance_pass": 1,
+        "peak_block_entries": 384,
+        "peak_block_fraction": 0.166666666666667,
+        "sampled_row_relative_error": 0.0278890667012228,
+        "spectral_landmarks": 8,
+        "spectral_rank": 6,
+        "storage_fraction": 0.127604166666667,
+        "storage_scalars": 294
+      },
+      "ridge_regularization": 1e-06,
+      "spectral_regularization": 1e-06,
+      "std_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.00951091494406955,
+          0.00980375340410449,
+          0.000125104864870686,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.0537325667396983,
+          0.0282606705734184,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.000125104864870686,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "test_indices": [
+        1,
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41,
+        45
+      ],
+      "test_instances": 12,
+      "train_instances": 36
+    },
+    {
+      "development_indices": [
+        3,
+        9,
+        16,
+        23,
+        29,
+        36,
+        43
+      ],
+      "development_instances": 7,
+      "fit_indices": [
+        0,
+        1,
+        4,
+        5,
+        7,
+        8,
+        11,
+        12,
+        13,
+        15,
+        17,
+        19,
+        20,
+        21,
+        24,
+        25,
+        27,
+        28,
+        31,
+        32,
+        33,
+        35,
+        37,
+        39,
+        40,
+        41,
+        44,
+        45,
+        47
+      ],
+      "fit_instances": 29,
+      "fold": 3,
+      "mean_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.0102703928427999,
+          0.00521514151202093,
+          0.00189495293465703,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.00903941554891081,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "operator": {
+        "dense_matmat_products": 186624,
+        "development_sampled_row_relative_error": 0.0265091349987212,
+        "entry_query_calls": 5,
+        "entry_query_fraction": 0.444444444444444,
+        "entry_query_requests": 1024,
+        "feature_butterfly_work": 1152,
+        "full_frobenius_relative_error": 0.0209795444498963,
+        "full_spectral_relative_error": 0.021705757050581,
+        "global_dense_matrix_materialized": 0,
+        "matmat_products": 46656,
+        "matmat_work_ratio": 4.0,
+        "matrix_free": 1,
+        "operator_records": 48,
+        "operator_tolerance": 0.05,
+        "operator_tolerance_pass": 1,
+        "peak_block_entries": 384,
+        "peak_block_fraction": 0.166666666666667,
+        "sampled_row_relative_error": 0.031600444846838,
+        "spectral_landmarks": 8,
+        "spectral_rank": 6,
+        "storage_fraction": 0.127604166666667,
+        "storage_scalars": 294
+      },
+      "ridge_regularization": 1e-06,
+      "spectral_regularization": 1e-06,
+      "std_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.0207638489831213,
+          0.00720894088561222,
+          0.00628484787964021,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.0239561949939161,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "test_indices": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30,
+        34,
+        38,
+        42,
+        46
+      ],
+      "test_instances": 12,
+      "train_instances": 36
+    },
+    {
+      "development_indices": [
+        4,
+        10,
+        17,
+        24,
+        30,
+        37,
+        44
+      ],
+      "development_instances": 7,
+      "fit_indices": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        8,
+        9,
+        12,
+        13,
+        14,
+        16,
+        18,
+        20,
+        21,
+        22,
+        25,
+        26,
+        28,
+        29,
+        32,
+        33,
+        34,
+        36,
+        38,
+        40,
+        41,
+        42,
+        45,
+        46
+      ],
+      "fit_instances": 29,
+      "fold": 4,
+      "mean_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.0359479971638876,
+          0.0342389552750988,
+          0.00947476467328513,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.00949602292247899,
+          0.00947476467328513,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          2.12582491938502e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "operator": {
+        "dense_matmat_products": 186624,
+        "development_sampled_row_relative_error": 0.0160624813960304,
+        "entry_query_calls": 5,
+        "entry_query_fraction": 0.444444444444444,
+        "entry_query_requests": 1024,
+        "feature_butterfly_work": 1152,
+        "full_frobenius_relative_error": 0.0146442418867913,
+        "full_spectral_relative_error": 0.0129804851538719,
+        "global_dense_matrix_materialized": 0,
+        "matmat_products": 46656,
+        "matmat_work_ratio": 4.0,
+        "matrix_free": 1,
+        "operator_records": 48,
+        "operator_tolerance": 0.05,
+        "operator_tolerance_pass": 1,
+        "peak_block_entries": 384,
+        "peak_block_fraction": 0.166666666666667,
+        "sampled_row_relative_error": 0.0161009869887775,
+        "spectral_landmarks": 8,
+        "spectral_rank": 6,
+        "storage_fraction": 0.127604166666667,
+        "storage_scalars": 294
+      },
+      "ridge_regularization": 1e-06,
+      "spectral_regularization": 1e-06,
+      "std_curves": {
+        "closed_form": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": [
+          0.0352348387861911,
+          0.0364315456675477,
+          0.0112106927466497,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ridge": [
+          0.0111929338909678,
+          0.0112106927466497,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spectral": [
+          7.05056362758763e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "test_indices": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35,
+        39,
+        43,
+        47
+      ],
+      "test_instances": 12,
+      "train_instances": 36
+    }
+  ],
+  "package": "hqml_spectral_qaoa",
+  "query_candidates": 81,
+  "records": 800,
+  "runtime_environment": {
+    "numpy": "2.5.1",
+    "platform": "macOS-26.6-arm64-arm-64bit-Mach-O",
+    "python": "3.13.12",
+    "timing_scope": "matched construction plus evaluation/application"
+  },
+  "schema_version": 5,
+  "seed": 1202,
+  "spectral_residual_gate": 0.05,
+  "spectral_residual_passes": 2,
+  "spectral_residual_total_folds": 4,
+  "spike_counterexample": [
+    {
+      "global_operator_error": 0.0,
+      "sampled_row_operator_error": 0.0,
+      "tau": 0.0
+    },
+    {
+      "global_operator_error": 0.25,
+      "sampled_row_operator_error": 0.0,
+      "tau": 0.25
+    },
+    {
+      "global_operator_error": 0.5,
+      "sampled_row_operator_error": 0.0,
+      "tau": 0.5
+    },
+    {
+      "global_operator_error": 1.0,
+      "sampled_row_operator_error": 0.0,
+      "tau": 1.0
+    },
+    {
+      "global_operator_error": 2.0,
+      "sampled_row_operator_error": 0.0,
+      "tau": 2.0
+    },
+    {
+      "global_operator_error": 4.0,
+      "sampled_row_operator_error": 0.0,
+      "tau": 4.0
+    },
+    {
+      "global_operator_error": 8.0,
+      "sampled_row_operator_error": 0.0,
+      "tau": 8.0
+    },
+    {
+      "global_operator_error": 16.0,
+      "sampled_row_operator_error": 0.0,
+      "tau": 16.0
+    }
+  ],
+  "timing_formula_runtime": [
+    {
+      "angle_pairs": 81,
+      "edges": 6,
+      "max_absolute_error": 4.44089209850063e-16,
+      "timing_formula_seconds": 0.000170125014847144,
+      "timing_statevector_over_formula": 107.954435851058,
+      "timing_statevector_seconds": 0.0183657500019763,
+      "vertices": 6
+    },
+    {
+      "angle_pairs": 81,
+      "edges": 8,
+      "max_absolute_error": 5.55111512312578e-16,
+      "timing_formula_seconds": 0.000215250009205192,
+      "timing_statevector_over_formula": 337.387521035207,
+      "timing_statevector_seconds": 0.0726226670085452,
+      "vertices": 8
+    },
+    {
+      "angle_pairs": 81,
+      "edges": 13,
+      "max_absolute_error": 7.7715611723761e-16,
+      "timing_formula_seconds": 0.000343583000358194,
+      "timing_statevector_over_formula": 861.698144801601,
+      "timing_statevector_seconds": 0.296064833994024,
+      "vertices": 10
+    },
+    {
+      "angle_pairs": 81,
+      "edges": 15,
+      "max_absolute_error": 7.7715611723761e-16,
+      "timing_formula_seconds": 0.000390999979572371,
+      "timing_statevector_over_formula": 2967.71328296658,
+      "timing_statevector_seconds": 1.16037583301659,
+      "vertices": 12
+    }
+  ],
+  "timing_kernel_runtime": [
+    {
+      "application_relative_error": 0.0298701392676226,
+      "batch_width": 16,
+      "dense_storage_scalars": 10000,
+      "feature_dimension": 4,
+      "landmarks": 56,
+      "rank": 16,
+      "records": 100,
+      "sampled_row_relative_error": 0.029584477500073,
+      "spectral_storage_scalars": 1616,
+      "timing_dense_over_spectral": 0.312336404262192,
+      "timing_dense_seconds": 0.000228291988605633,
+      "timing_spectral_seconds": 0.000730917003238574
+    },
+    {
+      "application_relative_error": 0.0327547204153094,
+      "batch_width": 16,
+      "dense_storage_scalars": 40000,
+      "feature_dimension": 4,
+      "landmarks": 60,
+      "rank": 16,
+      "records": 200,
+      "sampled_row_relative_error": 0.0451254713731258,
+      "spectral_storage_scalars": 3216,
+      "timing_dense_over_spectral": 0.883868770832498,
+      "timing_dense_seconds": 0.000977375020738691,
+      "timing_spectral_seconds": 0.00110579200554639
+    },
+    {
+      "application_relative_error": 0.0553062492160705,
+      "batch_width": 16,
+      "dense_storage_scalars": 160000,
+      "feature_dimension": 4,
+      "landmarks": 62,
+      "rank": 16,
+      "records": 400,
+      "sampled_row_relative_error": 0.05113038557846,
+      "spectral_storage_scalars": 6416,
+      "timing_dense_over_spectral": 2.48213207684219,
+      "timing_dense_seconds": 0.00417608299176209,
+      "timing_spectral_seconds": 0.00168245800887235
+    },
+    {
+      "application_relative_error": 0.0434417186506035,
+      "batch_width": 16,
+      "dense_storage_scalars": 640000,
+      "feature_dimension": 4,
+      "landmarks": 62,
+      "rank": 16,
+      "records": 800,
+      "sampled_row_relative_error": 0.0456249973064105,
+      "spectral_storage_scalars": 12816,
+      "timing_dense_over_spectral": 5.52110585473457,
+      "timing_dense_seconds": 0.0155110830091871,
+      "timing_spectral_seconds": 0.00280941597884521
+    }
+  ],
+  "title": "Collision Leakage and an Exact Depth-One Baseline: A Negative Audit of Singular-Value Priors for QAOA MaxCut",
+  "unique_edge_weights": [
+    1.0
+  ]
+}

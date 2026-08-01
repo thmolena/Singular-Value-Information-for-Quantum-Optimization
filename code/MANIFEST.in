@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include CITATION.cff
+include evidence_manifest.json
+include requirements.txt
+recursive-include src/hqml_spectral_qaoa/results *
+recursive-include results *
+recursive-include tests *.py

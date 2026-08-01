@@ -1,0 +1,169 @@
+\documentclass[10pt,letterpaper,twoside]{article}
+\usepackage{code/manuscript_assets/researchpreprint}
+\usepackage{amsmath,amssymb,amsthm,booktabs,graphicx}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{Zero-Query Depth-One QAOA Surfaces from Local Edge Statistics}
+\author{Molena Huynh}\email{molena.huynh@jmp.com}
+\affiliation{North Carolina State University}
+\maketitle
+
+\begin{abstract}
+Depth-one MaxCut QAOA admits an exact classical surface formula determined by
+edge degrees and common-neighbor counts. This paper implements the formula as
+a streamed zero-query baseline and evaluates it before learned singular-value
+priors. Edge statistics require
+$O(n+m+\sum_{(u,v)}\min\{\deg u,\deg v\})$ preprocessing; a $q$-point surface
+then costs $O(mq)$ arithmetic and $O(1)$ extra storage when streamed. The
+implementation is checked against independent statevectors at all 3,888 values
+from 48 authenticated ten-vertex neighborhoods of Stanford Gset G1. Maximum
+absolute discrepancy is $1.33\times10^{-15}$. Group-isomorphism analysis shows
+that these 48 tasks form only 16 classes and that 38 of 48 assignments in a
+superseded row split have an isomorphic training task. Class-grouped folds
+remove that leakage. At one queried target value, mean normalized regret is
+0.01572 for a training mean, 0.00920 for ridge, and 0.00791 for a singular-value
+prior; the exact formula has zero regret at every budget while using no target
+objective queries. The result replaces a query-efficiency claim by an exact
+computational baseline and a collision-aware evaluation contract. It applies
+to unweighted depth one, not higher depth or hardware execution.
+\end{abstract}
+
+\section{Depth-one objective and source tasks}
+
+For an unweighted graph $G=(V,E)$, define
+\begin{equation}
+ C=\sum_{(u,v)\in E}\frac{I-Z_uZ_v}{2},\qquad B=\sum_{v\in V}X_v,
+\end{equation}
+and
+\begin{equation}
+ F_G(\gamma,\beta)=|E|^{-1}\langle+|e^{i\gamma C}e^{i\beta B}
+ Ce^{-i\beta B}e^{-i\gamma C}|+\rangle. \label{eq:objective}
+\end{equation}
+The registered grid contains nine values of each angle. Forty-eight tasks are
+deterministic ten-vertex breadth-first neighborhoods of the checksum-pinned
+Stanford Gset G1 graph~\cite{gset}. They are related samples from one graph,
+not independent graph draws.
+
+\begin{theorem}[Isomorphism invariance]
+If $G'$ is obtained by a vertex permutation, then
+$F_{G'}(\gamma,\beta)=F_G(\gamma,\beta)$ for every angle pair and every QAOA
+depth. Isomorphic tasks cannot be separated across an independence-based
+train--test split.
+\end{theorem}
+\begin{proof}
+Let $U_\pi$ permute qubits. Then $C_{G'}=U_\pi C_GU_\pi^\dagger$,
+$U_\pi BU_\pi^\dagger=B$, and $U_\pi|+\rangle^{\otimes n}=|+\rangle^{\otimes n}$.
+Conjugating every layer and the measured cost in Eq.~\eqref{eq:objective} by
+$U_\pi$ leaves the scalar expectation unchanged.
+\end{proof}
+
+Exact isomorphism testing gives class sizes
+$11,7,7,5,4,2,2,2,1,1,1,1,1,1,1,1$. Four grouped folds contain 12 tasks each.
+The old row folds place an isomorphic training task beside 38 of 48 test
+assignments; Fig.~\ref{fig:collision} reports the full overlap audit.
+
+\begin{figure}[t]
+\includegraphics[width=\columnwidth]{code/results/figures/collision_audit.pdf}
+\caption{Isomorphism-class multiplicities and leakage counts in the superseded
+row-wise split. Grouped folds assign each class wholly to one test fold.}
+\label{fig:collision}
+\end{figure}
+
+\section{Exact streamed surface}
+
+For edge $(u,v)$, set $d_u=\deg(u)-1$, $d_v=\deg(v)-1$, and
+$\lambda_{uv}=|N(u)\cap N(v)|$.
+
+\begin{theorem}[Exact depth-one edge value]
+\label{thm:formula}
+At depth one,
+\begin{align}
+\langle C_{uv}\rangle={}&\frac12+\frac14\sin(4\beta)\sin\gamma
+(\cos^{d_u}\gamma+\cos^{d_v}\gamma)\nonumber\\
+&-\frac14\sin^2(2\beta)\cos^{d_u+d_v-2\lambda_{uv}}\!\gamma
+[1-\cos^{\lambda_{uv}}(2\gamma)]. \label{eq:formula}
+\end{align}
+Summing Eq.~\eqref{eq:formula} and dividing by $m=|E|$ gives the exact
+objective. With hashed adjacency, preprocessing costs
+$O(n+m+\sum_{(u,v)}\min\{\deg u,\deg v\})$ and $O(n+m)$ storage. A $q$-point
+surface costs $O(mq)$ work and may be streamed in $O(1)$ extra storage.
+\end{theorem}
+\begin{proof}
+Mixer conjugation gives
+\begin{equation}
+e^{i\beta B}Z_uZ_ve^{-i\beta B}=c^2Z_uZ_v+cs(Z_uY_v+Y_uZ_v)+s^2Y_uY_v,
+\end{equation}
+with $c=\cos(2\beta)$ and $s=\sin(2\beta)$. Cost terms outside the closed
+neighborhood of $(u,v)$ commute and cancel. Conjugating the remaining Pauli
+strings and using $\langle+|P|+\rangle=0$ unless
+$P\in\{I,X\}^{\otimes n}$ leaves the two endpoint contributions and one
+common-neighbor contribution in Eq.~\eqref{eq:formula}; this is the established
+Wang--Hadfield--Jiang--Rieffel identity~\cite{wang2018fermionic}. Degrees follow
+from one adjacency pass, while intersecting the smaller endpoint-neighbor set
+costs $O(\min\{\deg u,\deg v\})$ per edge. Formula evaluation is constant work
+per edge and angle pair.
+\end{proof}
+
+Figure~\ref{fig:formula} tests the exact expression against independent
+statevector evaluation and reports the matched runtime scaling.
+
+\begin{figure}[t]
+\includegraphics[width=0.94\textwidth]{code/results/figures/formula_validation_runtime.pdf}
+\caption{Independent statevector verification and matched full-surface CPU
+time. All 3,888 values agree near unit roundoff; the formula avoids exponential
+state storage.}
+\label{fig:formula}
+\end{figure}
+
+\section{Grouped query audit}
+
+Each test surface is ranked by a predicted surface. Regret after querying the
+first $b$ ranked target values is
+\begin{equation}
+r_b=\frac{\max_\theta F(\theta)-\max_{\theta\in Q_b}F(\theta)}
+{\max_\theta F(\theta)}.
+\end{equation}
+This finite-grid statistic does not assert continuous global optimality.
+Table~\ref{tab:regret} gives the low-budget grouped-fold values before the full
+curves are resolved graphically.
+
+\begin{table}[t]
+\caption{Grouped-fold mean normalized regret. The exact formula uses zero
+target objective queries; learned methods use the stated budget.}
+\label{tab:regret}
+\begin{ruledtabular}\begin{tabular}{lrrr}
+Method & $b=1$ & $b=2$ & $b=4$\\ \hline
+Training mean & .015721 & .014183 & .003326\\
+Ridge & .009196 & .003326 & .000000\\
+Spectral prior & .007912 & .007849 & .006823\\
+Exact formula & .000000 & .000000 & .000000
+\end{tabular}\end{ruledtabular}
+\end{table}
+
+Figure~\ref{fig:queries} shows the complete budget curve and fold variability.
+The singular-value residual passes its registered five-percent sampled-row
+gate in only two of four folds and does not consistently beat ridge. The exact
+formula returns the entire target surface classically and therefore has zero
+regret before any target objective evaluation.
+
+\begin{figure}[t]
+\includegraphics[width=\columnwidth]{code/results/figures/grouped_query_curves.pdf}
+\caption{Collision-aware grouped-fold regret versus target objective queries.
+Shading is the fold standard deviation.}
+\label{fig:queries}
+\end{figure}
+
+\section{Scope}
+
+The exact baseline is specific to unweighted depth-one MaxCut and a fixed
+angle grid. It does not extend unchanged to higher depth, weighted objectives,
+noise, or hardware sampling. The authenticated tasks come from one Gset graph.
+Within that scope, every learned query-advantage claim is dominated by the
+zero-query formula, and row-wise evaluation is invalidated by graph collisions.
+The useful output is therefore the streamed formula implementation, its
+resource bound, and an isomorphism-grouped testing protocol.
+
+\bibliographystyle{plainnat}
+\bibliography{code/manuscript_assets/references}
+\end{document}
