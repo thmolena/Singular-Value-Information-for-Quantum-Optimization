@@ -36,3 +36,6 @@ website/*.log
 
 # Editor-local config (may contain machine paths / private project refs)
 .vscode/
+
+# Externally fetched Gset instances; not redistributed (see code/data/README.md)
+code/data/gset/
